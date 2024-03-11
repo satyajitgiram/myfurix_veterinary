@@ -1,0 +1,315 @@
+/* Why 1 ---------------------------------- */ 
+.choose-feature {
+    &-wrap {
+        position: relative;
+        z-index: 2;
+        &:before {
+            content: '';
+            height: 70%;
+            width: 1px;
+            background-color: $theme-color;
+            position: absolute;
+            top: 49px;
+            left: 25px;
+            z-index: -1;
+        }
+        @include lg {
+            max-width: 740px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+    display: inline-flex;
+    gap: 15px;
+    margin-bottom: 23px;
+    text-align: left;
+    .media-body {
+        border-bottom: 1px solid $border-color;
+        padding-bottom: 34px;
+    }
+    &:last-child {
+        margin-bottom: 0;
+        .media-body {
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+    }
+    .box-number {
+        @include equal-size-lineHeight(50px);
+        border: 1px solid $theme-color;
+        color: $theme-color;
+        text-align: center;
+        border-radius: 999px;
+        font-size: 24px;
+        font-weight: 600;
+        background-color: $white-color;
+        transition: 0.4s ease-in-out;
+    }
+    .box-title {
+        padding-top: 15px;
+    }
+    &:hover {
+        .box-number {
+            background-color: $theme-color;
+            color: $white-color;
+        }
+    }
+}
+.img-box3 {
+    margin-left: 8px;
+    img {
+        width: 100%;
+        border-radius: 20px;
+        @include xs {
+            border-radius: 10px;
+        }
+    }
+}
+
+/* Why 2 ---------------------------------- */ 
+.why-tab-content {
+    box-shadow: 0px 6px 50px rgba(0, 0, 0, 0.06);
+    border-radius: 30px;
+    background-color: $white-color;
+    padding: 100px 60px 60px 60px;
+    @include md {
+        padding: 75px 40px 40px 40px;
+    }
+    @include sm {
+        border-radius: 20px;
+    }
+    @include xs {
+        padding: 60px 20px 20px 20px;
+    }
+    .sec-title {
+        max-width: 430px;
+        margin-bottom: 23px;
+        @include lg {
+            max-width: 100%;
+            text-align: center;
+        }
+    }
+    .box-text {
+        margin-bottom: 50px;
+        @include lg {
+            text-align: center;
+        }
+        @include md {
+            margin-bottom: 35px;
+        }
+    }
+}
+.choose-tab {
+    text-align: center;
+    margin: 0 auto -40px auto;
+    @include md {
+        margin: 0 auto -35px auto;
+    }
+    .nav {
+        background-color: $theme-color2;
+        display: inline-flex;
+        justify-content: center;
+        border-radius: 30px;
+        overflow: hidden;
+        position: relative;
+        z-index: 2;
+    }
+    .tab-btn {
+        font-family: $title-font;
+        font-size: 18px;
+        font-weight: 500;
+        border: none;
+        background-color: transparent;
+        padding: 0;
+        color: $white-color;
+        padding: 20px 25px;
+        border-left: 1px solid $border-color;
+        &:first-of-type {
+            border: none !important;
+        }
+        .icon {
+            display: inline-block;
+            @include equal-size(40px);
+            line-height: 38px;
+            text-align: center;
+            background-color: rgba($color: #fff, $alpha: 0.2);
+            border-radius: 99px;
+            margin-right: 5px;
+            @include sm {
+                display: none;
+            }
+        }
+        @include md {
+            font-size: 16px;
+            padding: 15px;
+        }
+        @include sm {
+            font-size: 14px;
+            padding: 15px 15px;
+        }
+        @include xs {
+            border-left: none;
+            border-top: 1px solid $border-color;
+            margin-top: -1px;
+        }
+    }
+    .indicator {
+        position: absolute;
+        left: var(--pos-x);
+        top: var(--pos-y);
+        width: var(--width-set);
+        height: var(--height-set);
+        background-color: $theme-color;
+        z-index: -1;
+        transition: 0.4s ease-in-out;
+        @include xs {
+            height: calc(var(--height-set) - 1px);
+        }
+    }
+}
+
+.case-box {
+    &-wrap {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+        @include xs {
+            grid-template-columns: repeat(1, 1fr);
+        }
+    }
+    background-color: $smoke-color;
+    padding: 30px;
+    border-radius: 20px;
+    @include lg {
+        text-align: center;
+    }
+    .box-title {
+        font-size: 20px;
+        margin-bottom: 5px;
+    }
+    .box-text {
+        margin-bottom: -0.5em;
+        line-height: 1.65;
+    }
+}
+
+.skill-feature {
+    text-align: left;
+    &:not(:last-child) {
+        margin-bottom: 25px;
+    }
+    &_title,
+    .progress-value {
+        font-size: 16px;
+        font-weight: 400;
+        margin-bottom: 10px;
+        margin-top: -0.3em;
+        font-family: $title-font;
+        color: $title-color;
+    }
+    .progress {
+        position: relative;
+        height: 6px;
+        background-color: $border-color;
+        overflow: visible;
+        border-radius: 10px;
+    }
+    .progress-bar {
+        background-color: $theme-color;
+        height: 100%;
+        margin: 0;
+        border-radius: inherit;
+        overflow: visible;
+        position: relative;
+    }
+    .progress-value {
+        position: absolute;
+        top: -30px;
+        right: 0px;
+    }
+}
+
+.tab-schedule {
+    border-radius: 30px;
+    background-color: $theme-color2;
+    padding: 40px;
+    @include xs {
+        border-radius: 15px;
+    }
+    @include vxs {
+        padding: 40px 20px;
+    }
+    .widget_title {
+        color: $white-color;
+        margin-bottom: 30px;
+    }
+    .box-text {
+        text-align: left !important;
+        color: $white-color;
+        margin-bottom: 16px;
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 1px solid rgba($color: #fff, $alpha: 0.3);
+        padding-bottom: 15px;
+        &:last-child {
+            margin-bottom: -0.5em;
+            padding-bottom: 0;
+            border-bottom: none;
+        }
+        &:first-child {
+            margin-top: -0.5em;
+        }
+    }
+}
+.sidebar-area {
+    .tab-schedule {
+        margin-bottom: 40px;
+        border-radius: 20px;
+        @include lg {
+            padding: 30px;
+        }
+        @include md {
+            padding: 40px;
+        }
+        @include sm {
+            padding: 20px;
+            border-radius: 10px;
+        }
+    }
+}
+
+/* Why 3 ------------------------------------------*/
+.why-feature {
+    background-color: $white-color;
+    border-radius: 20px;
+    padding: 40px 10px;
+    text-align: center;
+    background-size: auto;
+    background-position: top right;
+    .box-icon {
+        position: relative;
+        z-index: 2;
+        width: 60px;
+        margin: 0 auto 30px auto;
+        &:before {
+            content: '';
+            position: absolute;
+            inset: -20px -10px 0 -10px;
+            background-color: $smoke-color;
+            border-radius: 99px;
+            z-index: -1;
+        }
+    }
+    .box-text {
+        max-width: 210px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    &:hover {
+        .box-icon {
+            img {
+                transform: rotateY(180deg);
+            }
+        }
+    }
+}

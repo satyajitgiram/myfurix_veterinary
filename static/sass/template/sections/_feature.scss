@@ -1,0 +1,118 @@
+
+/* Feature List ---------------------------------- */
+.feature-list {
+    &-wrap {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 20px;
+        box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.06);
+        border-radius: 99px;
+    }
+    &-line {
+        height: 100px;
+        width: 1px;
+        background-color: $border-color;
+        &:last-child {
+            display: none;
+        }
+    }
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    .box-title {
+        font-size: 18px;
+        font-weight: 500;
+        margin-bottom: 3px;
+    }
+    .box-icon {
+        @include equal-size-lineHeight(70px);
+        text-align: center;
+        background-color: $smoke-color;
+        border-radius: 99px;
+    }
+    .box-text {
+        font-size: 14px;
+    }
+}
+
+@include lg {
+    .feature-list {
+        &-wrap {
+            border-radius: 20px;
+        }
+        &-line {
+            height: 155px;
+        }
+        display: block;
+        text-align: center;
+        padding: 15px 5px;
+        .box-icon {
+            margin: 0 auto 15px auto;
+        }
+    }
+}
+@include md {
+    .feature-list {
+        &-wrap {
+            flex-wrap: wrap;
+            padding: 0;
+            align-items: stretch;
+        }
+        &-line {
+            display: none;
+        }
+        flex: 50%;
+        padding: 15px 8px;
+        &:nth-child(1),
+        &:nth-child(5) {
+            border-right: 1px solid $border-color;
+        }
+        &:nth-child(1),
+        &:nth-child(3) {
+            border-bottom: 1px solid $border-color;
+        }
+    }
+}
+
+/* Feature Box ---------------------------------- */
+.feature-box {
+    &-wrap {
+        display: flex;
+        justify-content: space-between;
+        max-width: 1490px;
+        padding: 100px 12px;
+        margin: 0 auto;
+        @include lg {
+            gap: 15px;
+            padding: 70px 12px;
+        }
+        @include md {
+            flex-wrap: wrap;
+            gap: 40px 15px;
+            justify-content: space-evenly;
+        }
+    }
+    display: flex;
+    gap: 20px;
+    max-width: 285px;
+    @include lg {
+        flex-direction: column;
+        gap: 25px;
+        text-align: center;
+    }
+    @include md {
+        flex: calc(50% - 15px);
+    }
+    @include xs {
+        flex: 100%;
+    }
+    .box-title {
+        font-size: 20px;
+        margin-bottom: 5px;
+    }
+}
+
+.feature-sec2 {
+    border-bottom: 1px solid $border-color;
+}

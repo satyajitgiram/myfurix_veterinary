@@ -1,0 +1,631 @@
+/* Hero Global ---------------------------------- */
+.th-hero-wrapper {
+    position: relative;
+    z-index: 2;
+}
+
+.th-hero-bg {
+    position: absolute;
+    inset: 0;
+    img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+}
+/* Hero 1 ---------------------------------- */
+.hero-title {
+    font-size: 74px;
+    font-weight: 700;
+    line-height: 1.135;
+    margin-bottom: 20px;
+    margin-top: -0.2em;
+    .title1,
+    .title2 {
+        display: block;
+        max-width: fit-content;
+        position: relative;
+    }
+}
+.hero-subtitle {
+    display: block;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+    color: $theme-color2;
+    margin-top: -0.33em;
+    margin-bottom: 32px;
+}
+.hero-heading {
+    font-size: 30px;
+    font-weight: 600;
+    margin-bottom: 25px;
+}
+.hero-text {
+    margin-bottom: 32px;
+}
+
+.hero-1 {
+    overflow: hidden;
+    .hero-thumb {
+        &-wrap {
+            position: absolute;
+            left: 7%;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 3;
+            @media (max-width: 1800px) {
+                left: 10px;
+            }
+            @include ml {
+                display: none;
+            }
+            &:before,
+            &:after {
+                content: '';
+                height: 96px;
+                width: 3px;
+                background-image: linear-gradient(to bottom, $theme-color, transparent);
+                position: absolute;
+                left: calc(50% - 1.5px);
+            }
+            &:after {
+                top: calc(100% + 15px);
+            }
+            &:before {
+                bottom: calc(100% + 15px);
+                transform: rotateX(180deg);
+            }
+        }
+        position: relative;
+        z-index: 2;
+        .tab-btn {
+            height: 46px;
+            width: 46px;
+            line-height: 46px;
+            border: 1px solid $border-color;
+            border-radius: 99px;
+            background-color: $white-color;
+            text-align: center;
+            cursor: pointer;
+            margin: 5px 0;
+            img {
+                max-width: 45px;
+            }
+        }
+        .indicator {
+            @include indicator;
+            border: 2px solid $theme-color2;
+            border-radius: 99px;
+        }
+    }
+    .hero-img {
+        position: absolute;
+        top: 0;
+        right: 10%;
+        height: 100%;
+        display: grid;
+        align-content: center;
+        @include xxl {
+            right: 1%;
+        }
+        @include xl {
+            max-width: 500px;
+        }
+        @include lg {
+            max-width: 460px;
+        }
+    }
+}
+
+.hero-style1 {
+    position: relative;
+    z-index: 6;
+    padding: 180px 0;
+    .hero-text {
+        max-width: 580px;
+    }
+}
+@include xl {
+    .hero-title {
+        font-size: 64px;
+    }
+    .hero-style1 {
+        padding: 150px 0;
+    }
+}
+@include lg {
+    .hero-title {
+        font-size: 60px;
+    }
+    .hero-style1 {
+        .hero-text {
+            max-width: 540px;
+        }
+    }
+}
+
+@include md {
+    .hero-1 {
+        .hero-img {
+            width: 100%;
+            max-width: 100%;
+            padding: 0 15px 40px 15px;
+            justify-content: center;
+            position: static;
+        }
+    }
+    .hero-title {
+        font-size: 54px;
+        line-height: 1.2;
+    }
+    .hero-style1 {
+        padding: 100px 0 40px 0;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+        .hero-text {
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+}
+
+@include sm {
+    .hero-title {
+        font-size: 48px;
+    }
+    .hero-heading {
+        font-size: 24px;
+    }
+}
+
+@include xs {
+    .hero-title {
+        font-size: 36px;
+        line-height: 1.3;
+    }
+    .hero-subtitle {
+        margin-bottom: 25px;
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 390px) {
+    .hero-title {
+        font-size: 34px;
+        line-height: 1.3;
+    }
+}
+
+@media (max-width: 330px) {
+    .hero-title {
+        font-size: 32px;
+    }
+}
+
+
+/* Hero 2 --------------------------------------*/
+.hero-title2 {
+    font-size: 84px;
+    line-height: 1.12;
+    margin-top: -0.2em;
+    margin-bottom: 18px;
+    @include xl {
+        font-size: 64px;
+    }
+    @include lg {
+        font-size: 60px;
+    }
+    @include sm {
+        font-size: 52px;
+    }
+    @include xs {
+        font-size: 44px;
+    }
+    @include vxs {
+        font-size: 36px;
+    }
+    .title1,
+    .title2 {
+        display: block;
+    }
+    .line-text {
+        color: $theme-color;
+        font-weight: 400;
+        position: relative;
+        &:after {
+            content: '';
+            height: 22px;
+            width: 100%;
+            background-image: url('data:image/svg+xml,<svg width="288" height="22" viewBox="0 0 288 22" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 10.2839C33.4393 5.13087 76.1911 2 123.041 2C194.686 2 256.746 9.32162 287 20" stroke="%2304CE78" stroke-width="3"/></svg>');
+            background-size: 288px 22px;
+            background-repeat: repeat-x;
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+            animation: titleFill 3s linear infinite;
+            @include xs {
+                bottom: -12px;
+            }
+        }
+    }
+}
+
+@keyframes titleFill {
+    0% {
+        width: 0;
+    }
+    80% {
+        width: 100%;
+    }
+    100% {
+        width: 100%;
+    }
+}
+
+
+.hero-2 {
+    overflow: hidden;
+    .hero-img {
+        position: absolute;
+        bottom: 0;
+        right: 8%;
+        @include xxl {
+            right: 0%;
+        }
+        @include xl {
+            max-width: 600px;
+        }
+        @include lg {
+            max-width: 560px;
+        }
+        @include md {
+            position: relative;
+            top: unset;
+            right: unset;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 0 15px;
+        }
+    }
+    .hero-shape1,
+    .hero-shape2,
+    .hero-shape3,
+    .hero-shape4,
+    .hero-shape5 {
+        position: absolute;
+        z-index: 2;
+    }
+    .hero-shape1 {
+        top: 3%;
+        right: 37%;
+        animation: spin 10s linear infinite;
+    }
+    .hero-shape2 {
+        top: 27%;
+        right: 10%;
+        animation: jumpAni 6s linear infinite;
+    }
+    .hero-shape3 {
+        left: 25px;
+        bottom: 35px;
+        animation: spin 10s linear infinite;
+    }
+    .hero-shape4 {
+        right: 38%;
+        bottom: 45%;
+        animation: spin 10s linear infinite;
+    }
+    .hero-shape5 {
+        right: 16%;
+        bottom: 20%;
+        animation: jumpReverseAni 7s linear infinite;
+    }
+}
+.hero-style2 {
+    position: relative;
+    z-index: 6;
+    padding: 208px 0;
+    .sub-title {
+        margin-bottom: 27px;
+    }
+    .hero-text {
+        max-width: 630px;
+    }
+}
+
+@include xl {
+    .hero-2 {
+        .hero-shape2 {
+            right: 4%;
+        }
+    }
+    .hero-style2 {
+        padding: 160px 0;
+        .hero-text {
+            max-width: 550px;
+        }
+    }
+}
+
+@include xl {
+    .hero-style2 {
+        padding: 120px 0;
+        .hero-text {
+            max-width: 450px;
+        }
+    }
+}
+
+@include md {
+    .hero-2 {
+        .hero-shape1 {
+            top: 5%;
+            right: 5%;
+            max-width: 60px;
+        }
+        .hero-shape2 {
+            top: 5%;
+            left: 5%;
+            right: unset;
+            max-width: 60px;
+            animation: spin 10s linear infinite;
+        }
+        .hero-shape4 {
+            display: none;
+        }
+    }
+    .hero-style2 {
+        text-align: center;
+        padding: 100px 0 40px 0;
+        .hero-text {
+            max-width: 630px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+}
+
+@include xs {
+    .hero-2 {
+        .hero-shape1 {
+            top: 2%;
+        }
+        .hero-shape2 {
+            top: 2%;
+        }
+    }
+}
+
+
+/* Hero 3 --------------------------------------*/
+.hero-title2 {
+    .square-text {
+        border: 2px solid;
+        line-height: 1.03em;
+        padding: 0 10px;
+        display: inline-block; 
+        position: relative;
+        .dot1,
+        .dot2 {
+            position: absolute;
+            top: -10px;
+            height: calc(100% + 20px);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            &:before,
+            &:after {
+                content: '';
+                @include equal-size(16px);
+                display: inline-block;
+                background-color: $theme-color;
+                border-radius: 99px;
+                
+            }
+            @include sm {
+                top: -7px;
+                height: calc(100% + 14px);
+                &:before,
+                &:after {
+                    @include equal-size(12px);
+                }
+            }
+        }
+        .dot1 {
+            left: -10px;
+            @include sm {
+                left: -7px;
+            }
+        }
+        .dot2 {
+            right: -10px;
+            @include sm {
+                right: -7px;
+            }
+        }
+        
+    }
+}
+.hero-tags {
+    padding: 4px 16px;
+    display: inline-flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 40px;
+    position: relative;
+    &:before {
+        content: '';
+        position: absolute;
+        inset: 0 -35px 0 0;
+        background-image: linear-gradient(90deg, #14126A 0%, rgba(0, 8, 82, 0) 100%);
+        opacity: 0.5;
+        mix-blend-mode: color-burn;
+        border-radius: 30px 0px 0px 30px;
+    }
+    @include sm {
+        gap: 10px;
+        &:before {
+            inset: 0 -12px 0 0;
+        }
+    }
+    .tag {
+        color: $white-color;
+        font-size: 18px;
+        font-weight: 600;
+        text-transform: uppercase;
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        @include sm {
+            font-size: 14px;
+            gap: 10px;
+        }
+        &:after {
+            content: '';
+            height: 2px;
+            width: 50px;
+            background-color: $theme-color;
+            @include sm {
+                width: 25px;
+            }
+        }
+        &:last-child {
+            &:after {
+                display: none;
+            }
+        }
+    }
+}
+.hero-3 {
+    max-width: 1820px;
+    margin: 0 auto;
+    background-size: 1820px 100%;
+    border-radius: 50px;
+}
+.hero-style3 {
+    position: relative;
+    z-index: 6;
+    padding: 276px 0 446px 0;
+    .hero-title2 {
+        color: $white-color;
+        font-weight: 900;
+    }
+    .hero-text {
+        max-width: 630px;
+        color: $white-color;
+    }
+}
+
+.hero-form {
+    &-wrap {
+        background-color: $white-color;
+        box-shadow: 0px 6px 50px rgba(0, 0, 0, 0.05);
+        border-radius: 60px;
+        padding: 60px;
+        max-width: 1522px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        z-index: 9;
+        @media (max-width: 1860px) {
+            margin-right: 12px;
+            margin-left: 12px;
+        }
+        @media (max-width: 1600px) {
+            max-width: calc(100% - 24px);
+        }
+        @include xl {
+            padding: 45px;
+        }
+        .form-title {
+            margin: 0;
+            max-width: 350px;
+            padding-right: 55px;
+            border-right: 2px solid $theme-color;
+            margin-right: 55px;
+            font-weight: 600;
+            @include xl {
+                max-width: 300px;
+                padding-right: 25px;
+                margin-right: 20px;
+            }
+        }
+    }
+    margin-bottom: -20px;
+    .row {
+        --bs-gutter-x: 20px;
+    } 
+}
+
+@include xl {
+    .hero-3 {
+        background-size: 1450px 100%;
+        border-radius: 0;
+    }
+    .hero-style3 {
+        padding: 160px 0 350px 0;
+    }
+}
+@include lg {
+    .hero-3 {
+        margin-bottom: 100px;
+    }
+    .hero-form {
+        &-wrap {
+            bottom: -100px;
+            flex-direction: column;
+            .form-title {
+                border-right: none;
+                padding: 0;
+                margin: 0 0 25px 0;
+                max-width: 100%;
+                text-align: center;
+            }
+        }
+    }
+    .hero-style3 {
+        .hero-text {
+            max-width: 550px;
+        }
+    }
+}
+
+@include md {
+    .hero-form {
+        &-wrap {
+            bottom: -180px;
+        }
+    }
+    .hero-3 {
+        margin-bottom: 180px;
+        background-position: left 30% center;
+    }
+}
+
+@include sm {
+    .hero-style3 {
+        padding: 130px 0 100px 0;
+        text-align: center;
+        .hero-text {
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+    .hero-3 {
+        margin-bottom: 0;
+        background-size: cover;
+    }
+    .hero-form {
+        &-wrap {
+            position: static;
+            padding: 30px;
+            border-radius: 20px;
+        }
+    }
+}

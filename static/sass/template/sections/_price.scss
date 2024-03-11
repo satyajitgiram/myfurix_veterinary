@@ -1,0 +1,102 @@
+/* Price Card -----------------------------------*/
+.price-card {
+    &-wrap {
+        box-shadow: 0px 6px 50px rgba(0, 0, 0, 0.06);
+        border-radius: 30px;
+        overflow: hidden;
+    }
+    background-color: $white-color;
+    text-align: center;
+    .box-title {
+        font-size: 20px;
+        margin: 0;
+        padding: 13px 5px;
+    }
+    .box-price {
+        font-size: 36px;
+        font-weight: 600;
+        background-color: $theme-color;
+        color: $white-color;
+        padding: 6px;
+        margin: 0;
+    }
+    .duration {
+        font-size: 16px;
+        font-weight: 500;
+        color: $title-color;
+    }
+    .checklist {
+        text-align: center;
+        li {
+            color: $body-color;
+            justify-content: center;
+            margin-bottom: 0;
+            padding: 14px 5px;
+            border-bottom: 1px solid $border-color;
+            &.unavailable {
+                color: $gray-color;
+                i {
+                    visibility: hidden;
+                    color: $gray-color;
+                    @include lg {
+                        visibility: visible;
+                    }
+                }
+            }
+            .text {
+                display: none;
+                visibility: hidden;
+                @include lg {
+                    visibility: visible;
+                    display: flex;
+                }
+            }
+        }
+    }
+    .th-btn {
+        width: 200px;
+        max-width: 100%;
+        margin: 30px 10px;
+    }
+    &-list {
+        background-color: $smoke-color;
+        border-radius: 30px;
+        height: 100%;
+        .box-title {
+            font-size: 24px;
+            border-bottom: 1px solid $border-color;
+            padding: 40px 10px;
+        }
+        .checklist {
+            li {
+                i {
+                    display: none;
+                }
+                .text {
+                    display: block;
+                    visibility: visible;
+                }
+            }
+        }
+    }
+    &.active {
+        background-color: $smoke-color;
+        @include sm {
+            border: 1px solid $border-color;
+        }
+        .box-price {
+            background-color: $theme-color2;
+        }
+        .duration {
+            color: $white-color;
+        }
+        .th-btn {
+            background: linear-gradient(180deg, $theme-color2 37.5%, #E3EBFF 100%);
+            box-shadow: 0px 3px 15px #B0BAD3;
+            color: $white-color;
+            &:before {
+                background: linear-gradient(180deg, #A3BDFF 0%, rgba(155, 184, 255, 0) 78.65%);
+            }
+        }
+    }
+}

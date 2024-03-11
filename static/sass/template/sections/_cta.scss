@@ -1,0 +1,230 @@
+//---------------------------------------
+.offer-card {
+    padding: 47px 30px;
+    border-radius: 20px;
+    background-position: top left;
+    @include vxs {
+        padding: 40px 25px;
+    }
+    .box-subtitle {
+        font-size: 14px;
+        font-weight: 400;
+        text-transform: uppercase;
+        margin-top: -0.5em;
+        margin-bottom: 8px;
+        display: block;
+        color: $theme-color2;
+    }
+    .box-title {
+        margin-bottom: 6px;
+        @include vxs {
+            font-size: 26px;
+        }
+    }
+    .price {
+        font-size: 14px;
+        font-weight: 500;
+        font-family: $title-font;
+        margin-bottom: 23px;
+    }
+}
+
+//---------------------------------------
+.offer-grid {
+    padding: 40px 30px 40px 30px;
+    border-radius: 30px;
+    background-position: top left;
+    height: 100%;
+    .box-subtitle {
+        font-size: 16px;
+        font-weight: 500;
+        margin-top: -0.4em;
+        margin-bottom: 20px;
+        display: block;
+    }
+    .box-title {
+        font-size: 30px;
+        margin-bottom: 20px;
+    }
+    .price {
+        margin-bottom: 10px;
+    }
+    .box-text {
+        margin-bottom: 10px;
+    }
+    .th-btn {
+        box-shadow: 0px 3px 15px rgba(99, 130, 207, 0.7);
+    }
+}
+
+//--------------------------------------------
+.offer-box {
+    padding: 60px 40px;
+    border-radius: 30px;
+    background-position: left center;
+    @include xs {
+        padding: 40px 25px;
+        border-radius: 20px;
+    }
+    .box-subtitle {
+        font-size: 18px;
+        font-weight: 500;
+        text-transform: capitalize;
+        margin-bottom: 34px;
+        max-width: 295px;
+        display: block;
+        @include xs {
+            font-size: 16px;
+            margin-bottom: 25px;
+        }
+    }
+    .box-title {
+        font-size: 36px;
+        margin-bottom: 11px;
+        margin-top: -0.38em;
+        @include xs {
+            font-size: 30px;
+        }
+        @include vxs {
+            font-size: 26px;
+        }
+    }
+}
+
+//---------------------------------------
+.offer-block {
+    padding: 100px 50px 105px 100px;
+    margin-right: 100px;
+    border-radius: 0 30px 30px 0;
+    @include lg {
+        margin-right: 0;
+        border-radius: 30px;
+        padding: 100px 40px;
+        background-position: top left;
+    }
+    @include sm {
+        border-radius: 20px;
+        padding: 80px 30px;
+    }
+    @include vxs {
+        padding: 80px 20px  ;
+    }
+    .box-subtitle {
+        font-size: 30px;
+        font-weight: 500;
+        margin-top: -0.36em;
+        margin-bottom: 18px;
+        display: block;
+        @include xl {
+            font-size: 24px;
+        }
+    }
+    .sec-title {
+        margin-bottom: 17px;
+    }
+    .box-text {
+        margin-bottom: 33px;
+    }
+    .th-btn {
+        box-shadow: 0px 5px 16px rgba(0, 0, 0, 0.3);
+    }
+}
+.countdown-style1 {
+    display: flex;
+    justify-content: space-between;
+    max-width: 360px;
+    margin: 60px 0;
+    padding: 0;
+    list-style: none;
+    text-align: center;
+    @include sm {
+        margin: 50px 0 50px 0;
+    }
+    li {
+        @include equal-size(70px);
+        padding: 13px 0;
+        border-radius: 20px;
+        border: 2px solid $theme-color;
+    }
+    .count-number {
+        font-size: 24px;
+        line-height: 22px;
+        font-weight: 600;
+        color: $white-color;
+    }
+    .count-name {
+        font-size: 14px;
+        font-weight: 700;
+        color: $white-color;
+    }
+}
+.offer-block2 {
+    padding: 100px 40px;
+    margin-left: -100px;
+    border-radius: 30px 0 0 30px;
+    height: 100%;
+    @include lg {
+        margin-left: 0;
+        border-radius: 30px;
+    }
+    @include sm {
+        border-radius: 20px;
+        padding: 80px 30px;
+        background-position: top left;
+    }
+    @include vxs {
+        padding: 80px 20px;
+    }
+    .box-subtitle {
+        font-size: 20px;
+        font-weight: 600;
+        margin-top: -0.36em;
+        margin-bottom: 18px;
+        display: block;
+    }
+    .sec-title {
+        margin-bottom: 17px;
+    }
+    .box-text {
+        margin-bottom: 33px;
+    }
+}
+
+.cta-sec4 {
+    position: relative;
+    z-index: 3;
+    margin-top: -110px;
+    background-size: 100% calc(100% - 110px);
+    background-position: bottom left;
+    background-repeat: no-repeat;
+    @include lg {
+        background-size: cover;
+    }
+}
+.img-box2 {
+    margin-left: -30px;
+    img {
+        max-width: fit-content;
+    }
+    @include lg {
+        margin: -30px auto 0 auto;
+        img {
+            max-width: 100%;
+        }
+    }
+}
+
+.cta-sec5 {
+    padding: $space 60px;
+    border-radius: 20px;
+    background-position: left center;
+    @include md {
+        padding: $space-mobile 40px;
+    }
+    @include xs {
+        padding: $space-mobile 30px;
+    }
+    .sec-title {
+        max-width: 500px;
+    }
+}

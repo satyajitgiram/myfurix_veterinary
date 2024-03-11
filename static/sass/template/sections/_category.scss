@@ -1,0 +1,76 @@
+/* Category Card -------------------------------------*/
+.category-card {
+    background-color: $smoke-color;
+    border-radius: 30px;
+    text-align: center;
+    .box-icon {
+        height: 130px;
+        padding: 10px;
+        display: grid;
+        align-content: center;
+        justify-content: center;
+    }
+    .box-title {
+        font-size: 16px;
+        margin: 0;
+        border-top: 2px solid $white-color;
+        padding: 14px 5px;
+        a {
+            &:hover {
+                color: $theme-color;
+            }
+        }
+    }
+}
+
+/* Category Box -------------------------------------*/
+.category-box {
+    text-align: center;
+    .box-icon {
+        @include equal-size-lineHeight(150px);
+        margin: 0 auto 20px auto;
+        border-radius: 999px;
+        position: relative;
+        z-index: 2;
+        &:before,
+        &:after {
+            content: '';
+            position: absolute;
+            border-radius: inherit;
+            z-index: -1;
+        }
+        &:before {
+            inset: 11px;
+            background-color: $white-color;
+            
+        }
+        &:after {
+            inset: 0;
+            border: 2px dashed $border-color;
+        }
+        @include vxs {
+            @include equal-size-lineHeight(130px);
+        }
+    }
+    .box-title {
+        font-size: 20px;
+        margin-bottom: 5px;
+        @include vxs {
+            font-size: 18px;
+        }
+    }
+    .box-text {
+        font-size: 14px;
+    }
+    &:hover {
+        .box-icon {
+            img {
+                transform: rotateY(180deg);
+            }
+            &:after {
+                border-color: $theme-color;
+                animation: spin 10s linear infinite;
+            }
+        }
+    }
+}

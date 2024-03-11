@@ -1,0 +1,230 @@
+/* Team global ---------------------------------- */
+.th-team {
+    position: relative;
+    .box-img {
+        position: relative;
+        overflow: hidden;
+        img {
+            width: 100%;
+            transition: 0.4s ease-in-out;
+        }
+    }
+    .team-desig {
+        display: block;
+        margin-bottom: -0.45em;
+    }
+    .th-social {
+        transition: 0.4s ease-in-out;
+        a {
+            --icon-size: 44px;
+            background-color: $white-color;
+            color: $title-color;
+            box-shadow: 0px 20px 40px rgba(2, 29, 53, 0.2);
+            &:hover {
+                background-color: $theme-color;
+                color: $white-color;
+            }
+        }
+    }
+    .box-title {
+        margin-bottom: 4px;
+    }
+}
+/* Team Card ---------------------------------- */
+.team-card {
+    position: relative;
+    text-align: center;
+    .box-img {
+        border-radius: 20px;
+        margin-bottom: 30px;
+    }
+    .th-social {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        visibility: hidden;
+        opacity: 0;
+    }
+    &:hover {
+        .box-img {
+            img {
+                transform: scale(1.06);
+            }
+        }
+        .th-social {
+            visibility: visible;
+            opacity: 1;
+            bottom: 30px;
+        }
+    }
+}
+
+@include sm {
+    .team-card {
+        max-width: 440px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+/* Team Box ---------------------------------- */
+.team-box {
+    position: relative;
+    text-align: center;
+    background-color: $white-color;
+    box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.06);
+    border-radius: 20px;
+    padding: 30px;
+    .box-img {
+        border-radius: 12px;
+        margin-bottom: 30px;
+    }
+    .th-social {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        visibility: hidden;
+        opacity: 0;
+    }
+    &:hover {
+        .box-img {
+            img {
+                transform: scale(1.06);
+            }
+        }
+        .th-social {
+            visibility: visible;
+            opacity: 1;
+            bottom: 30px;
+        }
+    }
+}
+
+@include sm {
+    .team-box {
+        max-width: 440px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+/* Team Details ---------------------------------- */
+.about-box {
+    background-color: $white-color;
+    box-shadow: 0px 6px 30px rgba(0, 0, 0, 0.05);
+    border-radius: 20px;
+    overflow: hidden;
+    .box-img {
+        overflow: hidden;
+        img {
+            width: 100%;
+        }
+    }
+    @include xs {
+        border-radius: 10px;
+    }
+    .box-content {
+        padding: 40px;
+        @include md {
+            padding: 30px;
+        }
+        @include vxs {
+            padding: 30px 15px;
+        }
+    }
+    .box-title {
+        margin-bottom: 3px;
+    }
+    .box-desig {
+        margin-bottom: 15px;
+    }
+    .box-link {
+        margin-bottom: 10px;
+        &:first-of-type {
+            margin-top: 21px;
+        }
+        .icon-btn {
+            --btn-size: 36px;
+            line-height: 35px;
+            font-size: 16px;
+            color: $theme-color2;
+            border-radius: 99px;
+            margin-right: 5px;
+        }
+        a {
+            color: $body-color;
+            &:hover {
+                color: $theme-color2;
+            }
+        }
+    }
+    .th-social {
+        margin-top: 30px;
+        a {
+            --icon-size: 44px;
+            background-color: $white-color;
+            box-shadow: 0px 10px 20px rgba(2, 29, 53, 0.1);
+            &:hover {
+                background-color: $theme-color2;
+            }
+        }
+    }
+}
+.team-sticky {
+    position: sticky;
+    top: 110px;
+    left: 0;
+    @include lg {
+        display: flex;
+        gap: 40px;
+        .about-box {
+            align-self: flex-start;
+            flex: 50%;
+            margin-bottom: 0;
+        }
+    }
+    @include sm {
+        flex-direction: column;
+        gap: 30px;
+        .about-box {
+            width: 100%;
+        }
+    }
+}
+.team-details {
+    margin-left: 56px;
+    @include xl {
+        margin-left: 30px;
+    }
+    @include lg {
+        margin-left: 0;
+    }
+    @include xs {
+        .checklist.body-color li b {
+            width: 200px;
+            min-width: 200px;
+        }
+    }
+    @include vxs {
+        .checklist.body-color li b {
+            width: 150px;
+            min-width: 150px;
+        }
+    }
+}
+
+.team-contact-form {
+    background-color: $white-color;
+    box-shadow: 0px 0px 30px rgba(2, 29, 53, 0.08);
+    border-radius: 20px;
+    padding: 40px;
+    .form-title {
+        margin-top: -0.3em;
+        margin-bottom: 25px;
+    }
+    @include xs {
+        padding: 40px 20px;
+    }
+}

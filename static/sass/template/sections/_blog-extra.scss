@@ -1,0 +1,214 @@
+/* Blog Card ---------------------------------- */
+.blog-card {
+    border-radius: 20px;
+    .blog-img {
+        border-radius: 20px 20px 0 0;
+        overflow: hidden;
+    }
+    .blog-content {
+        box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.06);
+        border-radius: 0 0 20px 20px;
+        background-color: $white-color;
+        padding: 30px;
+        position: relative;
+        z-index: 3;
+    }
+    .box-title {
+        margin-bottom: 20px;
+        font-weight: 500;
+        a {
+            background-image: linear-gradient(to left, $theme-color, $theme-color);
+            background-repeat: no-repeat;
+            background-position: bottom left;
+            background-size: 0 2px;
+            transition: 0.5s ease-in-out;
+            &:hover {
+                background-size: 100% 2px;
+            }
+        }
+    }
+    .blog-img {
+        overflow: hidden;
+        img {
+            width: 100%;
+            transition: 0.4s ease-in-out;
+        }
+    }
+    .blog-meta {
+        margin: -0.4em 0 18px 0;
+        span, 
+        a {
+            > i {
+                color: $theme-color;
+            }
+        }
+    }
+    .th-btn {
+        background: linear-gradient(180deg, #C2D4FF 37.5%, #F0F4FF 100%);
+        box-shadow: 0px 2px 10px rgba(184, 191, 208, 0.5);
+        &:before {
+            background: linear-gradient(180deg, #F9FAFD 0%, rgba(249, 250, 253, 0) 78.65%);
+        }
+    }
+    &:hover {
+        .blog-img {
+            img {
+                transform: scale(1.08);
+            }
+        }
+    }
+}
+
+@include xl {
+    .blog-card .blog-content {
+        padding: 20px;
+    }
+}
+
+@include lg {
+    .blog-card .blog-content {
+        padding: 30px;
+    }
+}
+
+@include md {
+    .blog-card {
+        .box-title {
+            font-size: 22px;
+        }
+        .blog-content {
+            padding: 20px;
+        }
+    }
+}
+
+@include sm {
+    .blog-card {
+        .blog-content {
+            padding: 30px;
+        }
+        .box-title {
+            font-size: 24px;
+        }
+    }
+}
+@media (max-width: 410px) {
+    .blog-card {
+        .box-title {
+            font-size: 22px;
+        }
+    }
+}
+
+@media (max-width: 350px) {
+    .blog-card {
+        .blog-content {
+            padding: 18px;
+        }
+        .box-title {
+            font-size: 20px;
+        }
+    }
+}
+
+/* Blog Box ---------------------------------- */
+.blog-box {
+    border-radius: 20px;
+    padding: 30px;
+    background-color: $white-color;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.04);
+    .blog-img {
+        border-radius: 12px;
+        overflow: hidden;
+        margin-bottom: 25px;
+        img {
+            width: 100%;
+            transition: 0.4s ease-in-out;
+        }
+    }
+    .box-title {
+        margin-bottom: 20px;
+        font-weight: 500;
+        a {
+            background-image: linear-gradient(to left, $theme-color, $theme-color);
+            background-repeat: no-repeat;
+            background-position: bottom left;
+            background-size: 0 2px;
+            transition: 0.5s ease-in-out;
+            &:hover {
+                background-size: 100% 2px;
+            }
+        }
+    }
+    .blog-meta {
+        margin: -0.3em 0 18px 0;
+        span, 
+        a {
+            > i {
+                color: $theme-color;
+            }
+        }
+    }
+    .th-btn {
+        padding: 16px 25px;
+        background: linear-gradient(180deg, #C2D4FF 37.5%, #F0F4FF 100%);
+        box-shadow: 0px 2px 10px rgba(184, 191, 208, 0.5);
+        &:before {
+            background: linear-gradient(180deg, #F9FAFD 0%, rgba(249, 250, 253, 0) 78.65%);
+        }
+    }
+    &:hover {
+        .blog-img {
+            img {
+                transform: scale(1.08);
+            }
+        }
+    }
+}
+
+
+@include xl {
+    .blog-box {
+        padding: 20px;
+    }
+}
+
+@include lg {
+    .blog-box {
+        padding: 30px;
+    }
+}
+
+@include md {
+    .blog-box {
+        padding: 20px;
+        .box-title {
+            font-size: 22px;
+        }
+    }
+}
+
+@include sm {
+    .blog-box {
+        padding: 30px;
+        .box-title {
+            font-size: 24px;
+        }
+    }
+}
+@media (max-width: 410px) {
+    .blog-box {
+        .box-title {
+            font-size: 22px;
+        }
+    }
+}
+
+@media (max-width: 350px) {
+    .blog-box {
+        padding: 18px;
+        .box-title {
+            font-size: 20px;
+        }
+    }
+}

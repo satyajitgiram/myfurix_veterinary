@@ -1,0 +1,95 @@
+/* Process Card ---------------------------------- */
+.process-card {
+    &-wrap {
+        display: flex;
+        justify-content: space-between;
+        @include lg {
+            gap: 20px;
+        }
+        @include md {
+            flex-wrap: wrap;
+            gap: 40px;
+        }
+        @include sm {
+            justify-content: center;
+        }
+    }
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    max-width: 248px;
+    @include sm {
+        max-width: 450px;
+    }
+    &:after {
+        content: url('data:image/svg+xml,<svg width="141" height="129" viewBox="0 0 141 129" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10.5353 86.3765C17.0264 75.3002 23.7578 64.7247 33.0238 55.7004C42.4124 46.5512 53.9316 39.3632 66.6931 36.0546C78.4733 32.9983 91.3552 33.079 102.73 37.6721C107.694 39.6773 112.368 42.4449 116.417 45.9527C118.586 47.8323 120.607 49.8997 122.364 52.1775C123.954 54.2388 124.955 56.5779 127.148 58.0394C128.731 59.1012 130.946 57.5149 130.843 55.7492C130.601 51.6925 126.527 47.6609 123.842 44.8409C120.662 41.5005 116.97 38.6404 113.032 36.2614C105.005 31.4179 95.7487 28.7325 86.399 28.2759C64.4424 27.2003 43.4021 39.4723 28.9857 55.2352C20.9013 64.0748 13.8729 74.6087 8.9968 85.5583C8.52812 86.5754 9.95929 87.3562 10.5353 86.3765Z" fill="%23D8DDE1"/><path d="M115.57 52.2875C115.491 54.4259 118.922 55.3513 120.904 56.2908C124.041 57.7772 127.169 59.2159 130.346 60.6108C132.031 61.3491 134.433 60.178 133.796 58.0454C132.948 55.221 132.177 52.3675 131.694 49.4563C131.251 46.7728 131.403 44.0387 130.321 41.5273C129.606 39.8609 127.201 40.4913 126.715 41.9482C125.855 44.504 126.503 47.3846 126.925 50.0031C127.43 53.1389 128.211 56.1896 129.285 59.1781C130.25 58.2442 131.225 57.3118 132.19 56.3779C128.935 55.1559 125.674 53.9999 122.387 52.881C120.302 52.1672 117.693 50.5014 115.692 52.0031C115.587 52.0793 115.553 52.1665 115.57 52.2875Z" fill="%23D8DDE1"/></svg>');
+        position: absolute;
+        top: 0;
+        left: 87%;
+        z-index: -1;
+        @include xl {
+            left: 77%;
+        }
+        @include md {
+            left: 110%;
+        }
+        @include sm {
+            display: none;
+        }
+    }
+    &:nth-child(even) {
+        --theme-color: #1F5FFF;
+        &:after {
+            top: 18%;
+            transform: rotateX(180deg);
+            @include md {
+                display: none;
+            }
+        }
+    }
+    &:last-child {
+        &:after {
+            display: none;
+        }
+    }
+    .box-img {
+        width: 180px;
+        height: 180px;
+        margin: 0 auto 30px auto;
+        position: relative;
+        z-index: 2;
+        .img {
+            border: 2px solid $theme-color;
+            border-radius: 99px;
+            overflow: hidden;
+        }
+        img {
+            width: 100%;
+            transition: 0.4s ease-in-out;
+        }
+    }
+    .box-number {
+        font-size: 24px;
+        font-weight: 600;
+        @include equal-size-lineHeight(60px);
+        text-align: center;
+        background-color: $theme-color;
+        color: $white-color;
+        border-radius: 99px;
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: 3;
+    }
+    .box-title {
+        margin-bottom: 12px;
+        font-size: 20px;
+    }
+    &:hover {
+        .box-img {
+            img {
+                transform: scale(1.08)
+            }
+        }
+    }
+}

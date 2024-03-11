@@ -1,0 +1,115 @@
+/* Gallery Card -------------------------------*/
+.gallery-card {
+    text-align: center;
+    .box-img {
+        position: relative;
+        z-index: 2;
+        overflow: hidden;
+        img {
+            width: 100%;
+            @media (max-width: 1600px) {
+                min-height: 350px;
+                object-fit: cover;
+            }
+            @include xs {
+                min-height: 300px;
+            }
+        }
+        &:after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background-color: $title-color;
+            opacity: 0;
+            transition: 0.4s ease-in-out;
+            transform: scale(0.3);
+        }
+    }
+    .shape {
+        position: absolute;
+        inset: 40px;
+        border: 2px solid $white-color;
+        z-index: 2;
+        transition: 0.4s ease-in-out;
+        transform: scaleY(0);
+        @include xs {
+            inset: 15px;
+        }
+        .dot {
+            @include equal-size(14px);
+            background-color: $white-color;
+            position: absolute;
+            &:nth-child(1) {
+                top: -14px;
+                left: -14px;
+            }
+            &:nth-child(2) {
+                top: -14px;
+                right: -14px;
+            }
+            &:nth-child(3) {
+                bottom: -14px;
+                left: -14px;
+            }
+            &:nth-child(4) {
+                bottom: -14px;
+                right: -14px;
+            }
+        }
+    }
+    .box-content {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 100%;
+        transition: 0.4s ease-in-out;
+        visibility: hidden;
+        opacity: 0;
+        z-index: 3;
+        transform: translateY(40px);
+        @include xs {
+            padding: 20px;
+        }
+    }
+    .box-title {
+        font-size: 30px;
+        font-weight: 500;
+        color: $white-color;
+        margin: 19px 0 14px 0;
+        @include xs {
+            font-size: 26px;
+        }
+    }
+    .box-text {
+        color: $white-color;
+        max-width: 360px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    &:hover {
+        .box-img {
+            &:after {
+                opacity: 0.85;
+                transform: scale(1);
+            }
+        }
+        .box-content {
+            visibility: visible;
+            opacity: 1;
+            transform: translateY(-50%);
+        }
+        .shape {
+            transform: scaleY(1);
+        }
+    }
+}
+.gallery-sec1 {
+    max-width: 1910px;
+    margin-left: auto;
+    margin-right: auto;
+    @media (max-width: 1890px) and (min-width: 1400px){
+        .col-xxl-auto {
+            width: 33.32%;
+        }
+    }
+}

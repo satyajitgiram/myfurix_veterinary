@@ -1,0 +1,119 @@
+/* Counter 1 ---------------------------------- */
+.counter-card {
+    --border-color: #D8DDE1;
+    &-wrap {
+        display: flex;
+        justify-content: space-between;
+        background-color: $title-color;
+        padding: 60px;
+        border-radius: 30px;
+        @include lg {
+            padding: 40px;
+        }
+        @include md {
+            padding: 40px 20px;
+            border-radius: 20px;
+        }
+        @include sm {
+            padding: 30px 0;
+        }
+        .divider {
+            width: 1px;
+            height: 79px;
+            background-color: $border-color;
+            &:last-of-type {
+                display: none;
+            }
+        }
+    }
+    .box-number {
+        font-size: 64px;
+        color: $theme-color;
+        font-weight: 600;
+        margin-bottom: 0px;
+        margin-top: -0.2em;
+        .plus {
+            color: $white-color;
+            font-weight: 400;
+        }
+        @include lg {
+            font-size: 48px;
+        }
+    }
+}
+
+@include sm {
+    .counter-card {
+        &-wrap {
+            text-align: center;
+            flex-wrap: wrap;
+            position: relative;
+            .divider {
+                display: none;
+            }
+            &:after {
+                content: '';
+                height: 100%;
+                width: 1px;
+                position: absolute;
+                top: 0;
+                left: 50%;
+                background-color: rgba($color: #fff, $alpha: 0.4);
+            }
+        }
+        flex: 50%;
+        padding-left: 10px;
+        padding-right: 10px;
+        &:nth-child(1),
+        &:nth-child(3) {
+            padding-bottom: 30px;
+            border-bottom: 1px solid rgba($color: #fff, $alpha: 0.4);
+            margin-bottom: 30px;
+        }
+    }
+}
+
+/* Counter Grid ---------------------------------- */
+.counter-grid {
+    &-wrap {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        border-radius: 30px;
+        border: 2px solid $theme-color;
+        position: relative;
+        &:before,
+        &:after {
+            content: '';
+            position: absolute;
+            background-color: $theme-color;
+        }
+        &:before {
+            height: 2px;
+            width: 100%;
+            left: 0;
+            top: calc(50% - 1px);
+        }
+        &:after {
+            width: 2px;
+            height: 100%;
+            top: 0;
+            left: calc(50% - 1px);
+        }
+    }
+    padding: 40px 10px;
+    text-align: center;
+    .box-number {
+        font-size: 64px;
+        color: $title-color;
+        font-weight: 600;
+        margin-bottom: 0px;
+        margin-top: -0.2em;
+        .plus {
+            color: $theme-color;
+            font-weight: 400;
+        }
+        @include lg {
+            font-size: 48px;
+        }
+    }
+}
