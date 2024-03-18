@@ -25,9 +25,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-sl(iev_viycd#ui!v0uxxdojy3i4ajdyc#w@cnh-s7m2cwhzih'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ["66.179.250.113","myfurix.com", "http://myfurix.com", "https://myfurix.com"]
+ALLOWED_HOSTS = ["66.179.250.113","myfurix.com", "http://myfurix.com", "https://myfurix.com", "*"]
 
 
 # Application definition
