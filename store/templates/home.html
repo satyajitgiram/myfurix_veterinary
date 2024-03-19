@@ -519,70 +519,39 @@ Testimonial Area
     <!--==============================
 Blog Area  
 ==============================-->
-    <section class="space" id="blog-sec">
-        <div class="container">
-            <div class="row justify-content-lg-between justify-content-center align-items-center">
-                <div class="col-lg">
-                    <h2 class="sec-title text-center text-lg-start">Our Latest News & Blogs</h2>
-                </div>
-                <div class="col-lg-auto d-none d-lg-block">
-                    <div class="sec-btn">
-                        <a href="blog.html" class="th-btn style4">View All Post</a>
-                    </div>
-                </div>
+<section class="space" id="blog-sec">
+    <div class="container">
+        <div class="row justify-content-lg-between justify-content-center align-items-center">
+            <div class="col-lg">
+                <h2 class="sec-title text-center text-lg-start">Our Latest News & Blogs</h2>
             </div>
-            <div class="row gy-4">
-                <div class="col-xl-4 col-md-6">
-                    <div class="blog-box">
-                        <div class="blog-img">
-                            <img src="assets/img/blog/blog_2_1.jpg" alt="blog image">
-                        </div>
-                        <div class="blog-content">
-                            <div class="blog-meta">
-                                <a href="blog.html"><i class="fal fa-user"></i>By Furix</a>
-                                <a href="blog.html"><i class="fal fa-calendar"></i>15 March, 2024</a>
-                            </div>
-                            <h3 class="box-title"><a href="blog-details.html">How Business Is Taking Over & What to Do About It</a></h3>
-                            <a href="blog-details.html" class="th-btn btn-sm">Read More</a>
-                        </div>
-                    </div>
+            <div class="col-lg-auto d-none d-lg-block">
+                <div class="sec-btn">
+                    <a href="#" class="th-btn style4">View All Post</a>
                 </div>
-
-                <div class="col-xl-4 col-md-6">
-                    <div class="blog-box">
-                        <div class="blog-img">
-                            <img src="assets/img/blog/blog_2_2.jpg" alt="blog image">
-                        </div>
-                        <div class="blog-content">
-                            <div class="blog-meta">
-                                <a href="blog.html"><i class="fal fa-user"></i>By Furix</a>
-                                <a href="blog.html"><i class="fal fa-calendar"></i>16 March, 2024</a>
-                            </div>
-                            <h3 class="box-title"><a href="blog-details.html">Health vs. Wealth Navigate Business in Medicine</a></h3>
-                            <a href="blog-details.html" class="th-btn btn-sm">Read More</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-xl-4 col-md-6">
-                    <div class="blog-box">
-                        <div class="blog-img">
-                            <img src="assets/img/blog/blog_2_3.jpg" alt="blog image">
-                        </div>
-                        <div class="blog-content">
-                            <div class="blog-meta">
-                                <a href="blog.html"><i class="fal fa-user"></i>By Furix</a>
-                                <a href="blog.html"><i class="fal fa-calendar"></i>17 March, 2024</a>
-                            </div>
-                            <h3 class="box-title"><a href="blog-details.html">Preserving Care Strategy Amidst Food Changes</a></h3>
-                            <a href="blog-details.html" class="th-btn btn-sm">Read More</a>
-                        </div>
-                    </div>
-                </div>
-
             </div>
         </div>
-    </section>
+        <div class="row gy-4">
+            {% for post in latest_posts %}
+            <div class="col-xl-4 col-md-6">
+                <div class="blog-box">
+                    <div class="blog-img">
+                        <img src="{{ post.image.url }}" alt="{{ post.title }}">
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span><i class="fal fa-user"></i>By {{ post.author }}</span>
+                            <span><i class="fal fa-calendar"></i>{{ post.date }}</span>
+                        </div>
+                        <h3 class="box-title"><a href="#">{{ post.title }}</a></h3>
+                        <a href="#" class="th-btn btn-sm">Read More</a>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
     <!--==============================
 	Footer Area
 ==============================-->

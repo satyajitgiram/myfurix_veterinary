@@ -26,3 +26,13 @@ class Product(models.Model):
 
     def __str__(self):
             return self.title
+    
+class Post(models.Model):
+    title = models.CharField(max_length=200)
+    author = models.CharField(max_length=100)
+    date = models.DateField()
+    image = models.ImageField(upload_to='blog_images/')
+    content = models.TextField()
+
+    def __str__(self):
+        return self.title

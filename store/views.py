@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import Banner, Category, Product
+from .models import Banner, Category, Product, Post
 from app.models import Testimonial
 
 def home(request):
@@ -7,10 +7,11 @@ def home(request):
     categories = Category.objects.all()
     testimonials = Testimonial.objects.all()
     products = Product.objects.all()
+    latest_posts = Post.objects.order_by('-date')[:3]
 
     for testimonial in testimonials:
         testimonial.star_range = range(testimonial.star_rating)
-    return render(request, 'home.html', {'banners': banners, 'products': products, 'categories': categories, 'testimonials': testimonials})
+    return render(request, 'home.html', {'banners': banners,'latest_posts': latest_posts, 'products': products, 'categories': categories, 'testimonials': testimonials})
 
 
 
