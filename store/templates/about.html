@@ -319,7 +319,7 @@ Header Area
     <!--==============================
     Breadcumb
 ============================== -->
-    <div class="breadcumb-wrapper " data-bg-src="assets/img/bg/breadcumb-bg.jpg">
+    <div class="breadcumb-wrapper " data-bg-src="{% static 'img/bg/breadcumb-bg.jpg' %}">
         <div class="container">
             <div class="breadcumb-content">
                 <h1 class="breadcumb-title">About Us</h1>
@@ -334,14 +334,14 @@ Header Area
 About Area  
 ==============================-->
     <div class="overflow-hidden space" id="about-sec">
-        <div class="shape-mockup" data-top="0" data-right="0"><img src="assets/img/shape/pattern_shape_1.png" alt="shape"></div>
+        <div class="shape-mockup" data-top="0" data-right="0"><img src="{% static 'img/shape/pattern_shape_1.png' %}" alt="shape"></div>
         <div class="shape-mockup jump d-none d-xl-none" data-bottom="10%" data-left="2%"><img src="assets/img/shape/medicine_1.png" alt="shape"></div>
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-lg-7 col-md-8">
                     <div class="title-area text-center">
                         <span class="sub-title"><img src="assets/img/theme-img/title_icon.svg" alt="shape">About Our Company</span>
-                        <h2 class="sec-title">Taking Care of Your Health is Our Top Priority</h2>
+                        <h2 class="sec-title">Elevating Veterinary Care with Compassion</h2>
                     </div>
                 </div>
             </div>
@@ -352,30 +352,25 @@ About Area
                             <img src="assets/img/normal/about_1_3.png" alt="About">
                         </div>
                         <div class="about-info style2">
-                            <h3 class="box-title">Dr. Esita Jabed</h3>
-                            <p class="box-text">Mention the languages <br> in which the staff.</p>
-                            <div class="box-review">
-                                <i class="fa-sharp fa-solid fa-star"></i><i class="fa-sharp fa-solid fa-star"></i><i class="fa-sharp fa-solid fa-star"></i><i class="fa-sharp fa-solid fa-star"></i><i class="fa-sharp fa-solid fa-star"></i>
-                            </div>
-                            <a href="tel:+16356478965" class="box-link"><i class="fa-solid fa-phone"></i> +163 564 78965</a>
                         </div>
                     </div>
                 </div>
                 <div class="col-xl-6">
                     <div class="ps-xxl-4 ms-xl-2 text-center text-xl-start">
                         <div class="title-area mb-32">
-                            <p class="sec-text mt-n2">A brief statement outlining the purpose and mission of the clinic. This can include the commitment to patient care, community health, and any specifical goals for our values.</p>
-                        </div>
-                        <div class="mb-25 mt-n1">
-                            <div class="checklist style2 list-two-column">
-                                <ul>
-                                    <li><i class="fas fa-heart-pulse"></i> Medical Professionals</li>
-                                    <li><i class="fas fa-heart-pulse"></i> Facilities and Equipment</li>
-                                    <li><i class="fas fa-heart-pulse"></i> Emergency Care</li>
-                                    <li><i class="fas fa-heart-pulse"></i> Medical Consulting</li>
-                                </ul>
+                            <p class="sec-text mt-n2">Welcome to Furix, a pioneer in the realm of veterinary medical equipment, where innovation and empathy converge to redefine the standards of animal care. As a dedicated manufacturer, we are committed to revolutionizing veterinary medicine while championing the welfare of homeless pets.
+                                <br><br>
+                                At Furix, we believe in the power of technology to transform veterinary practice. Our cutting-edge medical equipment is meticulously crafted to empower veterinarians with precision, reliability, and ease of use. From ventilator systems to X-ray machines, each Furix product is designed to enhance diagnostic accuracy and therapeutic efficacy, ensuring the best possible outcomes for our furry patients.</p>
+                                <br><br>
+                                Beyond our commitment to innovation, Furix stands as a beacon of compassion in the veterinary industry. A percentage of our profits is dedicated to supporting the welfare of homeless pets, reflecting our belief that every animal deserves a chance at a better life. Through strategic partnerships with reputable organizations, we contribute to initiatives that provide shelter, medical care, and hope to animals in need.
+                                <br><br>
+                                At Furix, excellence is not just a standard – it's our ethos. From our rigorous research and development processes to our unparalleled customer support, we strive for excellence in everything we do. We work closely with veterinarians to understand their unique needs and challenges, ensuring that Furix products not only meet but exceed expectations.
+                                <br><br>
+                                Join us in our mission to elevate veterinary care and make a positive impact on the lives of animals worldwide. With Furix by your side, you're not just investing in superior medical equipment – you're investing in a brighter, more compassionate future for our beloved companions.
+
+                                
                             </div>
-                        </div>
+
                         <div>
                             <a href="about.html" class="th-btn">More About Us</a>
                         </div>
@@ -384,19 +379,7 @@ About Area
                                 <img src="assets/img/normal/about_1_4.jpg" alt="video">
                                 <a href="https://www.youtube.com/watch?v=_sI_Ps7JSEk" class="play-btn popup-video"><i class="fas fa-play"></i></a>
                             </div>
-                            <div class="box-content">
-                                <p class="box-text">We offer flexible appointment scheduling options to accommodate your busy lifestyle. Whether you prefer to book in advance or need. Your health and well-being are our top priorities.</p>
-                                <div class="about-contact-wrap">
-                                    <div class="about-contact">
-                                        <p class="box-label">Support Line 24/7</p>
-                                        <h3 class="box-title"><i class="fal fa-envelope"></i> <a href="mailto:info@contact.com">info@contact.com</a></h3>
-                                    </div>
-                                    <div class="about-contact">
-                                        <p class="box-label">Online Schedule</p>
-                                        <h3 class="box-title"><i class="fal fa-calendar-alt"></i> <a href="contact.html">Book Here</a></h3>
-                                    </div>
-                                </div>
-                            </div>
+
                         </div>
                     </div>
                 </div>
@@ -411,30 +394,23 @@ Counter Area
             <div class="counter-card-wrap bg-theme2">
                 <div class="counter-card">
                     <h2 class="box-number text-white">
-                        <span class="number"><span class="counter-number">69</span>k</span><span class="plus">+</span>
+                        <span class="number"><span class="counter-number">1</span>k</span><span class="plus">+</span>
                     </h2>
-                    <p class="box-text text-white">Satisfied Patients</p>
+                    <p class="box-text text-white">Satisfied Clients</p>
                 </div>
                 <div class="divider"></div>
                 <div class="counter-card">
                     <h2 class="box-number text-white">
-                        <span class="number"><span class="counter-number">236</span></span><span class="plus">+</span>
+                        <span class="number"><span class="counter-number">60</span></span><span class="plus">+</span>
                     </h2>
-                    <p class="box-text text-white">Professional Doctors</p>
+                    <p class="box-text text-white">Professional Enginners</p>
                 </div>
                 <div class="divider"></div>
                 <div class="counter-card">
                     <h2 class="box-number text-white">
-                        <span class="number"><span class="counter-number">19</span>k</span><span class="plus">+</span>
+                        <span class="number"><span class="counter-number">2</span></span><span class="plus">+</span>
                     </h2>
-                    <p class="box-text text-white">Operations Successful</p>
-                </div>
-                <div class="divider"></div>
-                <div class="counter-card">
-                    <h2 class="box-number text-white">
-                        <span class="number"><span class="counter-number">320</span></span><span class="plus">+</span>
-                    </h2>
-                    <p class="box-text text-white">National Awards Win</p>
+                    <p class="box-text text-white"> Awards Win</p>
                 </div>
                 <div class="divider"></div>
             </div>
@@ -445,71 +421,29 @@ Feature Area
 ==============================-->
     <section class="why-sec3 space-top" id="why-sec" data-bg-src="assets/img/bg/why_bg_3.jpg">
         <div class="container pb-5 mb-2">
-            <div class="row justify-content-center">
-                <div class="col-lg-7 col-md-8">
-                    <div class="title-area text-center">
-                        <span class="sub-title"><img src="assets/img/theme-img/title_icon.svg" alt="shape">Why Choose Us</span>
-                        <h2 class="sec-title">We Have 25 Years Experience in Medical Health Services</h2>
-                    </div>
-                </div>
-            </div>
-            <div class="row gy-4">
-                <div class="col-xl-3 col-sm-6">
-                    <div class="why-feature" data-bg-src="assets/img/bg/why_feature_bg.png">
-                        <div class="box-icon">
-                            <img src="assets/img/icon/choose_feature_1.svg" alt="icon">
-                        </div>
-                        <h3 class="box-title">Experience Doctor</h3>
-                        <p class="box-text">Our products are certified by reputable organic.</p>
-                    </div>
-                </div>
-                <div class="col-xl-3 col-sm-6">
-                    <div class="why-feature" data-bg-src="assets/img/bg/why_feature_bg.png">
-                        <div class="box-icon">
-                            <img src="assets/img/icon/choose_feature_2.svg" alt="icon">
-                        </div>
-                        <h3 class="box-title">Painless Treatment</h3>
-                        <p class="box-text">Our products are certified by reputable organic.</p>
-                    </div>
-                </div>
-                <div class="col-xl-3 col-sm-6">
-                    <div class="why-feature" data-bg-src="assets/img/bg/why_feature_bg.png">
-                        <div class="box-icon">
-                            <img src="assets/img/icon/choose_feature_3.svg" alt="icon">
-                        </div>
-                        <h3 class="box-title">Top Equipment</h3>
-                        <p class="box-text">Our products are certified by reputable organic.</p>
-                    </div>
-                </div>
-                <div class="col-xl-3 col-sm-6">
-                    <div class="why-feature" data-bg-src="assets/img/bg/why_feature_bg.png">
-                        <div class="box-icon">
-                            <img src="assets/img/icon/choose_feature_4.svg" alt="icon">
-                        </div>
-                        <h3 class="box-title">24/7 Advance Care</h3>
-                        <p class="box-text">Our products are certified by reputable organic.</p>
-                    </div>
-                </div>
-            </div>
+
+            
         </div>
     </section>
     <div class="container z-index-common" data-pos-for="#why-sec" data-sec-pos="top-half">
         <div class="th-video">
-            <img src="assets/img/normal/video_1.jpg" alt="video">
-            <a href="https://www.youtube.com/watch?v=_sI_Ps7JSEk" class="play-btn popup-video"><i class="fas fa-play"></i></a>
+            <img src="{% static 'img/normal/video_1.jpg' %}" alt="video">
+            <a href="https://youtu.be/mp95CANoJI8?si=_f3B9tcDnH46JYlo" class="play-btn popup-video"><i class="fas fa-play"></i></a>
         </div>
     </div>
+    <br>
+    <br>
+    <br>
 
     <!--==============================
 Cta Area  
 ==============================-->
-    <section class="space" data-bg-src="assets/img/bg/cta_bg_6.jpg">
+    <section class="space" data-bg-src="{% static 'img/bg/cta_bg_6.jpg' %}">
         <div class="container py-40">
             <div class="row justify-content-center text-center">
                 <div class="col-lg-10">
-                    <h2 class="h1 sec-title text-white"><span class="text-theme">Mediax</span> is Leading & Modern Technologies Hospital</h2>
+                    <h2 class="h1 sec-title text-white"><span class="text-theme">Furix</span> is Leading & Modern Veterinary Equipments Provider</h2>
                     <div class="btn-group justify-content-center">
-                        <a href="contact.html" class="th-btn style4 shadow-1">Make An Appointment</a>
                         <a href="contact.html" class="th-btn shadow-1">Contact Us Now</a>
                     </div>
                 </div>
