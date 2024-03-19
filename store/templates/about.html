@@ -62,6 +62,27 @@
 </head>
 
 <body>
+
+    <!--[if lte IE 9]>
+    	<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+  	<![endif]-->
+
+
+    <!--********************************
+   		Code Start From Here 
+	******************************** -->
+
+    <!--==============================
+     Preloader
+  ==============================-->
+    <div class="preloader ">
+        <button class="th-btn preloaderCls">Cancel Preloader </button>
+        <div class="preloader-inner">
+            <div class="loader"></div>
+        </div>
+    </div><!--==============================
+    Sidemenu
+============================== -->
  <!--==============================
     Sidemenu
 ============================== -->
@@ -301,117 +322,238 @@ Header Area
     <div class="breadcumb-wrapper " data-bg-src="assets/img/bg/breadcumb-bg.jpg">
         <div class="container">
             <div class="breadcumb-content">
-                <h1 class="breadcumb-title">Contact Us</h1>
+                <h1 class="breadcumb-title">About Us</h1>
                 <ul class="breadcumb-menu">
                     <li><a href="home-medical-clinic.html">Home</a></li>
-                    <li>Contact Us</li>
+                    <li>About Us</li>
                 </ul>
             </div>
         </div>
     </div>
     <!--==============================
-Contact Info Area
+About Area  
 ==============================-->
-    <div class="space">
+    <div class="overflow-hidden space" id="about-sec">
+        <div class="shape-mockup" data-top="0" data-right="0"><img src="assets/img/shape/pattern_shape_1.png" alt="shape"></div>
+        <div class="shape-mockup jump d-none d-xl-none" data-bottom="10%" data-left="2%"><img src="assets/img/shape/medicine_1.png" alt="shape"></div>
         <div class="container">
-            <div class="row gy-4">
-                <div class="col-xl-4 col-md-6">
-                    <div class="location-card">
-                        <h3 class="box-title">Central Branch</h3>
-                        <p class="footer-info">
-                            <i class="far fa-location-dot"></i>
-                            6/F MEGA CUBE, WANG KWONG ROAD, KOWLOON, HONG KONG
-                        </p>
-                        <p class="footer-info">
-                            <i class="far fa-envelope"></i>
-                            <a href="mailto:sales@myfurix.com" class="info-box_link">sales@myfurix.com</a>
-                        </p>
-                        <p class="footer-info">
-                            <i class="far fa-phone"></i>
-                            <a href="tel:+85295790472" class="info-box_link">+852 95790472</a>
-                        </p>
-                    </div>
-                </div>
-                <div class="col-xl-4 col-md-6">
-                    <div class="location-card active">
-                        <h3 class="box-title">Shenzhen Branch</h3>
-                        <p class="footer-info">
-                            <i class="far fa-location-dot"></i>
-                            Furix Assembly line 5, Manjing hua xueyeli, Nanlian Street, Longgang District Shenzhen City, Guangdong Province, PRC.
-                        </p>
-                        <p class="footer-info">
-                            <i class="far fa-envelope"></i>
-                            <a href="mailto:info@contacusa.com" class="info-box_link">sales@myfurix.co</a>
-                        </p>
-                        <p class="footer-info">
-                            <i class="far fa-phone"></i>
-                            <a href="tel:+8613538187995" class="info-box_link">+86 13538187995</a>
-                        </p>
-                    </div>
-                </div>
-                <div class="col-xl-4 col-md-6">
-                    <div class="location-card">
-                        <h3 class="box-title">India Branch</h3>
-                        <p class="footer-info">
-                            <i class="far fa-location-dot"></i>
-                            Furix Pharmaceutical MFG Unit 39/1 kalaria, Dhar Rd, Indore, M.P. India 452001
-                        </p>
-                        <p class="footer-info">
-                            <i class="far fa-envelope"></i>
-                            <a href="mailto:info@contactaus.com" class="info-box_link">sales@myfurix.co</a>
-                        </p>
-                        <p class="footer-info">
-                            <i class="far fa-phone"></i>
-                            <a href="tel:+919981124206" class="info-box_link">+91 9981124206</a>
-                        </p>
+            <div class="row justify-content-center">
+                <div class="col-lg-7 col-md-8">
+                    <div class="title-area text-center">
+                        <span class="sub-title"><img src="assets/img/theme-img/title_icon.svg" alt="shape">About Our Company</span>
+                        <h2 class="sec-title">Taking Care of Your Health is Our Top Priority</h2>
                     </div>
                 </div>
             </div>
-            
-        </div>
-    </div> 
-    <!--==============================
-Contact Area   
-==============================-->
-    <div class="space-bottom">
-        <div class="container">
-            <form action="mail.php" method="POST" class="contact-form ajax-contact" data-bg-src="assets/img/bg/contact_form_bg.png">
-                <div class="input-wrap">
-                    <h2 class="sec-title">Get In Touch!</h2>
-                    <div class="row">
-                        <div class="form-group col-12">
-                            <input type="text" class="form-control" name="name" id="name" placeholder="Your Name">
-                            <i class="fal fa-user"></i>
+            <div class="row align-items-center">
+                <div class="col-xl-6 mb-30 mb-xl-0">
+                    <div class="img-box1">
+                        <div class="img1">
+                            <img src="assets/img/normal/about_1_3.png" alt="About">
                         </div>
-                        <div class="form-group col-12">
-                            <input type="email" class="form-control" name="email" id="email" placeholder="Email Address">
-                            <i class="fal fa-envelope"></i>
-                        </div>
-                        <div class="form-group col-12">
-                            <input type="tel" class="form-control" name="number" id="number" placeholder="Phone Number">
-                            <i class="fal fa-phone"></i>
-                        </div>
-                        <div class="form-group col-12">
-                            <textarea name="message" id="message" cols="30" rows="3" class="form-control" placeholder="Type Appointment Note..."></textarea>
-                            <i class="fal fa-pencil"></i>
-                        </div>
-                        <div class="form-btn col-12">
-                            <button class="th-btn btn-fw">BOOK AN APPOINTMENT</button>
+                        <div class="about-info style2">
+                            <h3 class="box-title">Dr. Esita Jabed</h3>
+                            <p class="box-text">Mention the languages <br> in which the staff.</p>
+                            <div class="box-review">
+                                <i class="fa-sharp fa-solid fa-star"></i><i class="fa-sharp fa-solid fa-star"></i><i class="fa-sharp fa-solid fa-star"></i><i class="fa-sharp fa-solid fa-star"></i><i class="fa-sharp fa-solid fa-star"></i>
+                            </div>
+                            <a href="tel:+16356478965" class="box-link"><i class="fa-solid fa-phone"></i> +163 564 78965</a>
                         </div>
                     </div>
-                    <p class="form-messages mb-0 mt-3"></p>
                 </div>
-
-            </form>
-        </div>
-    </div><!--==============================
-Map Area  
-==============================-->
-    <div class="">
-        <div class="contact-map">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d29526.862845777516!2d114.19549362849735!3d22.321214962312254!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34040133ac4455b5%3A0xfee46804f32098c2!2sMega%20Cube%2C%208%20Wang%20Kwong%20Rd%2C%20Kowloon%20Bay%2C%20Hong%20Kong!5e0!3m2!1sen!2sin!4v1710435159530!5m2!1sen!2sin" allowfullscreen="" loading="lazy"></iframe>
+                <div class="col-xl-6">
+                    <div class="ps-xxl-4 ms-xl-2 text-center text-xl-start">
+                        <div class="title-area mb-32">
+                            <p class="sec-text mt-n2">A brief statement outlining the purpose and mission of the clinic. This can include the commitment to patient care, community health, and any specifical goals for our values.</p>
+                        </div>
+                        <div class="mb-25 mt-n1">
+                            <div class="checklist style2 list-two-column">
+                                <ul>
+                                    <li><i class="fas fa-heart-pulse"></i> Medical Professionals</li>
+                                    <li><i class="fas fa-heart-pulse"></i> Facilities and Equipment</li>
+                                    <li><i class="fas fa-heart-pulse"></i> Emergency Care</li>
+                                    <li><i class="fas fa-heart-pulse"></i> Medical Consulting</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div>
+                            <a href="about.html" class="th-btn">More About Us</a>
+                        </div>
+                        <div class="about-video-wrap">
+                            <div class="th-video about-video">
+                                <img src="assets/img/normal/about_1_4.jpg" alt="video">
+                                <a href="https://www.youtube.com/watch?v=_sI_Ps7JSEk" class="play-btn popup-video"><i class="fas fa-play"></i></a>
+                            </div>
+                            <div class="box-content">
+                                <p class="box-text">We offer flexible appointment scheduling options to accommodate your busy lifestyle. Whether you prefer to book in advance or need. Your health and well-being are our top priorities.</p>
+                                <div class="about-contact-wrap">
+                                    <div class="about-contact">
+                                        <p class="box-label">Support Line 24/7</p>
+                                        <h3 class="box-title"><i class="fal fa-envelope"></i> <a href="mailto:info@contact.com">info@contact.com</a></h3>
+                                    </div>
+                                    <div class="about-contact">
+                                        <p class="box-label">Online Schedule</p>
+                                        <h3 class="box-title"><i class="fal fa-calendar-alt"></i> <a href="contact.html">Book Here</a></h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
+    <!--==============================
+Counter Area  
+==============================-->
+    <div class="z-index-common" data-pos-for="#why-sec" data-sec-pos="bottom-half">
+        <div class="container">
+            <div class="counter-card-wrap bg-theme2">
+                <div class="counter-card">
+                    <h2 class="box-number text-white">
+                        <span class="number"><span class="counter-number">69</span>k</span><span class="plus">+</span>
+                    </h2>
+                    <p class="box-text text-white">Satisfied Patients</p>
+                </div>
+                <div class="divider"></div>
+                <div class="counter-card">
+                    <h2 class="box-number text-white">
+                        <span class="number"><span class="counter-number">236</span></span><span class="plus">+</span>
+                    </h2>
+                    <p class="box-text text-white">Professional Doctors</p>
+                </div>
+                <div class="divider"></div>
+                <div class="counter-card">
+                    <h2 class="box-number text-white">
+                        <span class="number"><span class="counter-number">19</span>k</span><span class="plus">+</span>
+                    </h2>
+                    <p class="box-text text-white">Operations Successful</p>
+                </div>
+                <div class="divider"></div>
+                <div class="counter-card">
+                    <h2 class="box-number text-white">
+                        <span class="number"><span class="counter-number">320</span></span><span class="plus">+</span>
+                    </h2>
+                    <p class="box-text text-white">National Awards Win</p>
+                </div>
+                <div class="divider"></div>
+            </div>
+        </div>
+    </div>
+    <!--==============================
+Feature Area  
+==============================-->
+    <section class="why-sec3 space-top" id="why-sec" data-bg-src="assets/img/bg/why_bg_3.jpg">
+        <div class="container pb-5 mb-2">
+            <div class="row justify-content-center">
+                <div class="col-lg-7 col-md-8">
+                    <div class="title-area text-center">
+                        <span class="sub-title"><img src="assets/img/theme-img/title_icon.svg" alt="shape">Why Choose Us</span>
+                        <h2 class="sec-title">We Have 25 Years Experience in Medical Health Services</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row gy-4">
+                <div class="col-xl-3 col-sm-6">
+                    <div class="why-feature" data-bg-src="assets/img/bg/why_feature_bg.png">
+                        <div class="box-icon">
+                            <img src="assets/img/icon/choose_feature_1.svg" alt="icon">
+                        </div>
+                        <h3 class="box-title">Experience Doctor</h3>
+                        <p class="box-text">Our products are certified by reputable organic.</p>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-sm-6">
+                    <div class="why-feature" data-bg-src="assets/img/bg/why_feature_bg.png">
+                        <div class="box-icon">
+                            <img src="assets/img/icon/choose_feature_2.svg" alt="icon">
+                        </div>
+                        <h3 class="box-title">Painless Treatment</h3>
+                        <p class="box-text">Our products are certified by reputable organic.</p>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-sm-6">
+                    <div class="why-feature" data-bg-src="assets/img/bg/why_feature_bg.png">
+                        <div class="box-icon">
+                            <img src="assets/img/icon/choose_feature_3.svg" alt="icon">
+                        </div>
+                        <h3 class="box-title">Top Equipment</h3>
+                        <p class="box-text">Our products are certified by reputable organic.</p>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-sm-6">
+                    <div class="why-feature" data-bg-src="assets/img/bg/why_feature_bg.png">
+                        <div class="box-icon">
+                            <img src="assets/img/icon/choose_feature_4.svg" alt="icon">
+                        </div>
+                        <h3 class="box-title">24/7 Advance Care</h3>
+                        <p class="box-text">Our products are certified by reputable organic.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="container z-index-common" data-pos-for="#why-sec" data-sec-pos="top-half">
+        <div class="th-video">
+            <img src="assets/img/normal/video_1.jpg" alt="video">
+            <a href="https://www.youtube.com/watch?v=_sI_Ps7JSEk" class="play-btn popup-video"><i class="fas fa-play"></i></a>
+        </div>
+    </div>
+
+    <!--==============================
+Cta Area  
+==============================-->
+    <section class="space" data-bg-src="assets/img/bg/cta_bg_6.jpg">
+        <div class="container py-40">
+            <div class="row justify-content-center text-center">
+                <div class="col-lg-10">
+                    <h2 class="h1 sec-title text-white"><span class="text-theme">Mediax</span> is Leading & Modern Technologies Hospital</h2>
+                    <div class="btn-group justify-content-center">
+                        <a href="contact.html" class="th-btn style4 shadow-1">Make An Appointment</a>
+                        <a href="contact.html" class="th-btn shadow-1">Contact Us Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--==============================
+Testimonial Area  
+==============================-->
+    <section class="space" id="testi-sec" data-bg-src="assets/img/bg/testi_bg_3.jpg">
+        <div class="container">
+            <h2 class="sec-title text-center">What Our Customers Says?</h2>
+            <div class="swiper th-slider has-shadow" id="testiSlide1" data-slider-options='{"breakpoints":{"0":{"slidesPerView":1},"576":{"slidesPerView":"1"},"768":{"slidesPerView":"1"},"992":{"slidesPerView":"2"},"1200":{"slidesPerView":"2"}}}'>
+                <div class="swiper-wrapper">
+                    {% for testimonial in testimonials %}
+                    <div class="swiper-slide">
+                        <div class="testi-card">
+                            <div class="box-review">
+                                {% for _ in testimonial.star_range %}
+                                    <i class="fa-sharp fa-solid fa-star"></i>
+                                {% endfor %}
+                            </div>
+                            <div class="box-quote">
+                                <img src="{% static 'img/icon/quote_1.svg' %}" alt="Icon">
+                            </div>
+                            <p class="box-text">{{ testimonial.quote_text }}</p>
+                            <div class="box-profile">
+                                <div class="box-img">
+                                    <img src="{{ testimonial.client_image.url }}" alt="Avater">
+                                </div>
+                                <div class="box-content">
+                                    <h3 class="box-title">{{ testimonial.client_name }}</h3>
+                                    <span class="box-desig">{{ testimonial.client_profession }}</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+                <div class="slider-pagination"></div>
+            </div>
+        </div>
+    </section>
 
     <!--==============================
 	Footer Area
@@ -517,16 +659,17 @@ Map Area
     </div>
 </footer>
 
-      <!-- Scroll To Top -->
-      <div class="scroll-top">
+    <!--********************************
+			Code End  Here 
+	******************************** -->
+
+    <!-- Scroll To Top -->
+    <div class="scroll-top">
         <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
             <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" style="transition: stroke-dashoffset 10ms linear 0s; stroke-dasharray: 307.919, 307.919; stroke-dashoffset: 307.919;"></path>
         </svg>
     </div>
 
-    <!--********************************
-			Code End  Here 
-	******************************** -->
  <!--==============================
     All Js File
     ============================== -->

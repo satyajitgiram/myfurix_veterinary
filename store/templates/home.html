@@ -62,7 +62,7 @@
 </head>
 
 <body>
-    <!--==============================
+    {% comment %} <!--==============================
 Product Lightbox
 ==============================-->
     <div id="QuickView" class="white-popup mfp-hide">
@@ -107,7 +107,9 @@ Product Lightbox
             </div>
             <button title="Close (Esc)" type="button" class="mfp-close">×</button>
         </div>
-    </div><!--==============================
+    </div> {% endcomment %}
+    
+    <!--==============================
     Sidemenu
 ============================== -->
     <div class="sidemenu-wrapper sidemenu-cart ">
@@ -184,7 +186,7 @@ Product Lightbox
                     <p class="about-text">Subscribe to out newsletter today to receive latest news administrate cost effective for tactical data.</p>
                     <p class="footer-info">
                         <i class="fal fa-location-dot"></i>
-                        2478 Street City Ohio 90255
+                        6/F Mega Cube, Wang Kwong Road, Kowloonk, Hong Kong
                     </p>
                     <p class="footer-info">
                         <i class="fal fa-envelope"></i>
@@ -215,14 +217,6 @@ Product Lightbox
                     <div class="form-group">
                         <input type="checkbox" id="checkboxagree" name="checkboxagree">
                         <label for="checkboxagree">I agree with the terms & conditions</label>
-                    </div>
-                    <div class="btn-group">
-                        <a href="https://play.google.com/" class="img-btn">
-                            <img src="assets/img/normal/apple_store.png" alt="icon">
-                        </a>
-                        <a href="https://play.google.com/" class="img-btn">
-                            <img src="assets/img/normal/play_store.png" alt="icon">
-                        </a>
                     </div>
                 </div>
             </div>
@@ -280,7 +274,7 @@ Product Lightbox
                         <ul>
                             <li class="d-none d-md-inline-block">
                                 <div class="dropdown-link">
-                                    <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink1" data-bs-toggle="dropdown" aria-expanded="true"><img src="assets/img/icon/english.png" alt="icon"> English</a>
+                                    <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink1" data-bs-toggle="dropdown" aria-expanded="true"><img src="{% static 'img/icon/english.png' %}" alt="icon"> English</a>
                                     <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink1">
                                         <li>
                                             <a href="#">German</a>
@@ -321,7 +315,7 @@ Product Lightbox
                     <div class="col-auto d-none d-lg-inline-block">
                         <nav class="main-menu d-none d-lg-inline-block">
                             <ul>
-                                <li><a href="about.html">About Us</a></li>
+                                <li><a href="/about">About Us</a></li>
                                 <li >
                                     <a href="/products">Our Products</a>
                                 </li>
@@ -394,39 +388,7 @@ Hero Area
 Feature Area  
 ==============================-->
 
-    <!--==============================
-Cta Area  
-==============================-->
-    <section class="">
-        <div class="container z-index-common">
-            <div class="row gy-30 justify-content-center">
-                <div class="col-xl-4 col-md-6">
-                    <div class="offer-card mega-hover" data-bg-src="assets/img/bg/cta_bg_1_1.jpg">
-                        <span class="h6 box-subtitle">GET UP TO 26%</span>
-                        <h3 class="box-title">Pressure Metter</h3>
-                        <p class="price">$80.00 - <del>$120.00</del></p>
-                        <a href="shop-details.html" class="th-btn btn-sm style4">Shop Now</a>
-                    </div>
-                </div>
-                <div class="col-xl-4 col-md-6">
-                    <div class="offer-card mega-hover" data-bg-src="assets/img/bg/cta_bg_1_2.jpg">
-                        <span class="h6 box-subtitle">GET UP TO 20%</span>
-                        <h3 class="box-title">Capsule Medicine</h3>
-                        <p class="price">$80.00 - <del>$100.00</del></p>
-                        <a href="shop-details.html" class="th-btn btn-sm style2">Shop Now</a>
-                    </div>
-                </div>
-                <div class="col-xl-4 col-md-6">
-                    <div class="offer-card mega-hover" data-bg-src="assets/img/bg/cta_bg_1_3.jpg">
-                        <span class="h6 box-subtitle">GET UP TO 26%</span>
-                        <h3 class="box-title">Surgical Gloves</h3>
-                        <p class="price">$80.00 - <del>$120.00</del></p>
-                        <a href="shop-details.html" class="th-btn btn-sm">Shop Now</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+
     <!--==============================
 Category Area  
 ==============================-->
@@ -466,380 +428,60 @@ Category Area
     <!--==============================
 Product Area
 ==============================-->
-    <section class="space" id="shop-sec">
-        <div class="container">
-            <div class="row justify-content-lg-between justify-content-center align-items-center">
-                <div class="col-lg-auto">
-                    <h3 class="sec-title text-center">Our Latest Products</h3>
-                </div>
-                <div class="col-lg-auto">
-                    <div class="filter-menu filter-menu-active">
-                        <button data-filter="*" class="th-btn active" type="button">All Products</button>
-                        <button data-filter=".cat1" class="th-btn" type="button">Medicine</button>
-                        <button data-filter=".cat2" class="th-btn" type="button">Equipment</button>
-                        <button data-filter=".cat3" class="th-btn" type="button">Accessories</button>
-                    </div>
-                </div>
+<section class="space" id="shop-sec">
+    <div class="container">
+        <div class="row justify-content-lg-between justify-content-center align-items-center">
+            <div class="col-lg-auto">
+                <h3 class="sec-title text-center">Our Latest Products</h3>
             </div>
-            <div class="row gy-40 filter-active">
-                <div class="col-xl-3 col-lg-4 col-sm-6 filter-item cat3">
-                    <div class="th-product product-grid">
-                        <div class="product-img">
-                            <img src="assets/img/product/product_1_1.jpg" alt="Product Image">
-                            <span class="product-tag">Sale!</span>
-                            <div class="actions">
-                                <a href="#QuickView" class="icon-btn popup-content"><i class="far fa-eye"></i></a>
-                                <a href="cart.html" class="icon-btn"><i class="far fa-cart-plus"></i></a>
-                                <a href="wishlist.html" class="icon-btn"><i class="far fa-heart"></i></a>
-                            </div>
-                        </div>
-                        <div class="product-content">
-                            <a href="shop-details.html" class="product-category">Accessories</a>
-                            <h3 class="product-title"><a href="shop-details.html">Surgery Hands Gloves</a></h3>
-                            <span class="price">$20.00 - <del>$30.00</del></span>
-                        </div>
-                    </div>
+            <div class="col-lg-auto">
+                <div class="filter-menu filter-menu-active">
+                    <button data-filter="*" class="th-btn active" type="button">All Products</button>
+                    {% for category in categories %}
+                    <button data-filter=".cat{{ category.id }}" class="th-btn" type="button">{{ category.title }}</button>
+                    {% endfor %}
                 </div>
-
-                <div class="col-xl-3 col-lg-4 col-sm-6 filter-item cat1">
-                    <div class="th-product product-grid">
-                        <div class="product-img">
-                            <img src="assets/img/product/product_1_2.jpg" alt="Product Image">
-                            <div class="actions">
-                                <a href="#QuickView" class="icon-btn popup-content"><i class="far fa-eye"></i></a>
-                                <a href="cart.html" class="icon-btn"><i class="far fa-cart-plus"></i></a>
-                                <a href="wishlist.html" class="icon-btn"><i class="far fa-heart"></i></a>
-                            </div>
-                        </div>
-                        <div class="product-content">
-                            <a href="shop-details.html" class="product-category">Medicine</a>
-                            <h3 class="product-title"><a href="shop-details.html">D-Ribose Drug Medicine</a></h3>
-                            <span class="price">$39.85</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-xl-3 col-lg-4 col-sm-6 filter-item cat2">
-                    <div class="th-product product-grid">
-                        <div class="product-img">
-                            <img src="assets/img/product/product_1_3.jpg" alt="Product Image">
-                            <div class="actions">
-                                <a href="#QuickView" class="icon-btn popup-content"><i class="far fa-eye"></i></a>
-                                <a href="cart.html" class="icon-btn"><i class="far fa-cart-plus"></i></a>
-                                <a href="wishlist.html" class="icon-btn"><i class="far fa-heart"></i></a>
-                            </div>
-                        </div>
-                        <div class="product-content">
-                            <a href="shop-details.html" class="product-category">Equipment</a>
-                            <h3 class="product-title"><a href="shop-details.html">CAD Dentistry Prosthesis</a></h3>
-                            <span class="price">$96.85</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-xl-3 col-lg-4 col-sm-6 filter-item cat3">
-                    <div class="th-product product-grid">
-                        <div class="product-img">
-                            <img src="assets/img/product/product_1_4.jpg" alt="Product Image">
-                            <span class="product-tag">Sale!</span>
-                            <div class="actions">
-                                <a href="#QuickView" class="icon-btn popup-content"><i class="far fa-eye"></i></a>
-                                <a href="cart.html" class="icon-btn"><i class="far fa-cart-plus"></i></a>
-                                <a href="wishlist.html" class="icon-btn"><i class="far fa-heart"></i></a>
-                            </div>
-                        </div>
-                        <div class="product-content">
-                            <a href="shop-details.html" class="product-category">Accessories</a>
-                            <h3 class="product-title"><a href="shop-details.html">Surgery Safety Mask</a></h3>
-                            <span class="price">$08.85 - <del>$16.99</del></span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-xl-3 col-lg-4 col-sm-6 filter-item cat3">
-                    <div class="th-product product-grid">
-                        <div class="product-img">
-                            <img src="assets/img/product/product_1_5.jpg" alt="Product Image">
-                            <div class="actions">
-                                <a href="#QuickView" class="icon-btn popup-content"><i class="far fa-eye"></i></a>
-                                <a href="cart.html" class="icon-btn"><i class="far fa-cart-plus"></i></a>
-                                <a href="wishlist.html" class="icon-btn"><i class="far fa-heart"></i></a>
-                            </div>
-                        </div>
-                        <div class="product-content">
-                            <a href="shop-details.html" class="product-category">Accessories</a>
-                            <h3 class="product-title"><a href="shop-details.html">Infrared Thermometers</a></h3>
-                            <span class="price">$32.85</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-xl-3 col-lg-4 col-sm-6 filter-item cat2">
-                    <div class="th-product product-grid">
-                        <div class="product-img">
-                            <img src="assets/img/product/product_1_6.jpg" alt="Product Image">
-                            <div class="actions">
-                                <a href="#QuickView" class="icon-btn popup-content"><i class="far fa-eye"></i></a>
-                                <a href="cart.html" class="icon-btn"><i class="far fa-cart-plus"></i></a>
-                                <a href="wishlist.html" class="icon-btn"><i class="far fa-heart"></i></a>
-                            </div>
-                        </div>
-                        <div class="product-content">
-                            <a href="shop-details.html" class="product-category">Equipment</a>
-                            <h3 class="product-title"><a href="shop-details.html">Drug Inhaler Nebulizers</a></h3>
-                            <span class="price">$30.85</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-xl-3 col-lg-4 col-sm-6 filter-item cat2 cat1">
-                    <div class="th-product product-grid">
-                        <div class="product-img">
-                            <img src="assets/img/product/product_1_7.jpg" alt="Product Image">
-                            <span class="product-tag">Sale!</span>
-                            <div class="actions">
-                                <a href="#QuickView" class="icon-btn popup-content"><i class="far fa-eye"></i></a>
-                                <a href="cart.html" class="icon-btn"><i class="far fa-cart-plus"></i></a>
-                                <a href="wishlist.html" class="icon-btn"><i class="far fa-heart"></i></a>
-                            </div>
-                        </div>
-                        <div class="product-content">
-                            <a href="shop-details.html" class="product-category">Medicine</a>
-                            <h3 class="product-title"><a href="shop-details.html">Paracetamol Drug</a></h3>
-                            <span class="price">$08.85 -<del>$16.99</del></span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-xl-3 col-lg-4 col-sm-6 filter-item cat3">
-                    <div class="th-product product-grid">
-                        <div class="product-img">
-                            <img src="assets/img/product/product_1_8.jpg" alt="Product Image">
-                            <div class="actions">
-                                <a href="#QuickView" class="icon-btn popup-content"><i class="far fa-eye"></i></a>
-                                <a href="cart.html" class="icon-btn"><i class="far fa-cart-plus"></i></a>
-                                <a href="wishlist.html" class="icon-btn"><i class="far fa-heart"></i></a>
-                            </div>
-                        </div>
-                        <div class="product-content">
-                            <a href="shop-details.html" class="product-category">Accessories</a>
-                            <h3 class="product-title"><a href="shop-details.html">Blood Pressure Machine</a></h3>
-                            <span class="price">$30.85</span>
-                        </div>
-                    </div>
-                </div>
-
             </div>
         </div>
-    </section>
+        <div class="row gy-40 filter-active">
+            {% for product in products %}
+            <div class="col-xl-3 col-lg-4 col-sm-6 filter-item cat{{ product.category.id }}">
+                <div class="th-product product-grid">
+                    <div class="product-img">
+                        <img src="{{ product.image.url }}" alt="Product Image">
+                        {% if product.discount_price %}
+                        <span class="product-tag">Sale!</span>
+                        {% endif %}
+                        <div class="actions">
+                            <a href="#QuickView" class="icon-btn popup-content"><i class="far fa-eye"></i></a>
+                            <a href="{% url 'product_detail' product.id %}" class="icon-btn"><i class="far fa-cart-plus"></i></a>
+                            <a href="wishlist.html" class="icon-btn"><i class="far fa-heart"></i></a>
+                        </div>
+                    </div>
+                    <div class="product-content">
+                        <a href="{% url 'product_detail' product.id %}" class="product-category">{{ product.category.name }}</a>
+                        <h3 class="product-title"><a href="{% url 'product_detail' product.id %}">{{ product.title }}</a></h3>
+                        {% if product.discount_price %}
+                        <span class="price">${{ product.discount_price }} - <del>${{ product.price }}</del></span>
+                        {% else %}
+                        <span class="price">${{ product.price }}</span>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
     
-    <!--==============================
-Product Area  
-==============================-->
-    <section class="space">
-        <div class="container">
-            <div class="row">
-                <div class="col-xl-9">
-                    <div class="row justify-content-md-between justify-content-center align-items-center">
-                        <div class="col-md">
-                            <h3 class="sec-title has-line">Our Top Medicine</h3>
-                        </div>
-                        <div class="col-md-auto mt-n3 mt-md-0">
-                            <div class="sec-btn">
-                                <a href="shop.html" class="th-btn style-smoke">VIEW ALL PRODUCTS</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row gy-40">
-
-                        <div class="col-lg-4 col-sm-6">
-                            <div class="th-product product-grid">
-                                <div class="product-img">
-                                    <img src="assets/img/product/product_1_1.jpg" alt="Product Image">
-                                    <span class="product-tag">Sale!</span>
-                                    <div class="actions">
-                                        <a href="#QuickView" class="icon-btn popup-content"><i class="far fa-eye"></i></a>
-                                        <a href="cart.html" class="icon-btn"><i class="far fa-cart-plus"></i></a>
-                                        <a href="wishlist.html" class="icon-btn"><i class="far fa-heart"></i></a>
-                                    </div>
-                                </div>
-                                <div class="product-content">
-                                    <a href="shop-details.html" class="product-category">Accessories</a>
-                                    <h3 class="product-title"><a href="shop-details.html">Surgery Hands Gloves</a></h3>
-                                    <span class="price">$20.00 - <del>$30.00</del></span>
-                                </div>
-                            </div>
-                        </div>
 
 
-                        <div class="col-lg-4 col-sm-6">
-                            <div class="th-product product-grid">
-                                <div class="product-img">
-                                    <img src="assets/img/product/product_1_2.jpg" alt="Product Image">
-                                    <div class="actions">
-                                        <a href="#QuickView" class="icon-btn popup-content"><i class="far fa-eye"></i></a>
-                                        <a href="cart.html" class="icon-btn"><i class="far fa-cart-plus"></i></a>
-                                        <a href="wishlist.html" class="icon-btn"><i class="far fa-heart"></i></a>
-                                    </div>
-                                </div>
-                                <div class="product-content">
-                                    <a href="shop-details.html" class="product-category">Medicine</a>
-                                    <h3 class="product-title"><a href="shop-details.html">D-Ribose Drug Medicine</a></h3>
-                                    <span class="price">$39.85</span>
-                                </div>
-                            </div>
-                        </div>
-
-
-                        <div class="col-lg-4 col-sm-6">
-                            <div class="th-product product-grid">
-                                <div class="product-img">
-                                    <img src="assets/img/product/product_1_3.jpg" alt="Product Image">
-                                    <div class="actions">
-                                        <a href="#QuickView" class="icon-btn popup-content"><i class="far fa-eye"></i></a>
-                                        <a href="cart.html" class="icon-btn"><i class="far fa-cart-plus"></i></a>
-                                        <a href="wishlist.html" class="icon-btn"><i class="far fa-heart"></i></a>
-                                    </div>
-                                </div>
-                                <div class="product-content">
-                                    <a href="shop-details.html" class="product-category">Equipment</a>
-                                    <h3 class="product-title"><a href="shop-details.html">CAD Dentistry Prosthesis</a></h3>
-                                    <span class="price">$96.85</span>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-                <div class="col-xl-3 mt-40 mt-xl-0">
-                    <div class="offer-grid mega-hover text-center text-xl-start" data-bg-src="assets/img/bg/cta_bg_2_1.jpg">
-                        <span class="h6 box-subtitle text-white">EXRTA 9% SAVING ON ORDER</span>
-                        <p class="price text-white">$80.00 - <del>$120.00</del></p>
-                        <h3 class="box-title text-white">For Weight Gain</h3>
-                        <a href="shop-details.html" class="th-btn btn-sm style4">Shop Now</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!--==============================
-Cta Area  
-==============================-->
-    <section class="">
-        <div class="container z-index-common">
-            <div class="row gy-30">
-                <div class="col-lg-6">
-                    <div class="offer-box mega-hover" data-bg-src="assets/img/bg/cta_bg_3_1.jpg">
-                        <h3 class="box-title">Week End Sale<span class="text-theme2">!</span></h3>
-                        <span class="h6 box-subtitle">Buy Your Best Healthcare Equipment & Medicines. <span class="text-theme2">Hurry Up!</span></span>
-                        <a href="shop-details.html" class="th-btn btn-sm">Shop Now</a>
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                    <div class="offer-box mega-hover" data-bg-src="assets/img/bg/cta_bg_3_2.jpg">
-                        <h3 class="box-title">Special Offer Now<span class="text-theme">!</span></h3>
-                        <span class="h6 box-subtitle">Buy Your Best Healthcare Equipment & Medicines. <span class="text-theme">Hurry Up!</span></span>
-                        <a href="shop-details.html" class="th-btn btn-sm style4">Shop Now</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!--==============================
-Product Area  
-==============================-->
-    <section class="space">
-        <div class="container">
-            <div class="row">
-                <div class="col-xl-3 mb-40 mb-xl-0">
-                    <div class="offer-grid mega-hover text-center text-xl-start" data-bg-src="assets/img/bg/cta_bg_2_2.jpg">
-                        <span class="h6 box-subtitle">FREE SHIPPING AND MORE</span>
-                        <p class="box-text text-theme2">Curbside Delivery</p>
-                        <h3 class="box-title">Medical Gadget</h3>
-                        <a href="shop-details.html" class="th-btn btn-sm style4">Shop Now</a>
-                    </div>
-                </div>
-                <div class="col-xl-9">
-                    <div class="row justify-content-md-between justify-content-center align-items-center">
-                        <div class="col-md">
-                            <h3 class="sec-title has-line">Top Equipment’s</h3>
-                        </div>
-                        <div class="col-md-auto mt-n3 mt-md-0">
-                            <div class="sec-btn">
-                                <a href="shop.html" class="th-btn style-smoke">VIEW ALL PRODUCTS</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row gy-40">
-
-                        <div class="col-lg-4 col-sm-6">
-                            <div class="th-product product-grid">
-                                <div class="product-img">
-                                    <img src="assets/img/product/product_1_1.jpg" alt="Product Image">
-                                    <span class="product-tag">Sale!</span>
-                                    <div class="actions">
-                                        <a href="#QuickView" class="icon-btn popup-content"><i class="far fa-eye"></i></a>
-                                        <a href="cart.html" class="icon-btn"><i class="far fa-cart-plus"></i></a>
-                                        <a href="wishlist.html" class="icon-btn"><i class="far fa-heart"></i></a>
-                                    </div>
-                                </div>
-                                <div class="product-content">
-                                    <a href="shop-details.html" class="product-category">Accessories</a>
-                                    <h3 class="product-title"><a href="shop-details.html">Surgery Hands Gloves</a></h3>
-                                    <span class="price">$20.00 - <del>$30.00</del></span>
-                                </div>
-                            </div>
-                        </div>
-
-
-                        <div class="col-lg-4 col-sm-6">
-                            <div class="th-product product-grid">
-                                <div class="product-img">
-                                    <img src="assets/img/product/product_1_2.jpg" alt="Product Image">
-                                    <div class="actions">
-                                        <a href="#QuickView" class="icon-btn popup-content"><i class="far fa-eye"></i></a>
-                                        <a href="cart.html" class="icon-btn"><i class="far fa-cart-plus"></i></a>
-                                        <a href="wishlist.html" class="icon-btn"><i class="far fa-heart"></i></a>
-                                    </div>
-                                </div>
-                                <div class="product-content">
-                                    <a href="shop-details.html" class="product-category">Medicine</a>
-                                    <h3 class="product-title"><a href="shop-details.html">D-Ribose Drug Medicine</a></h3>
-                                    <span class="price">$39.85</span>
-                                </div>
-                            </div>
-                        </div>
-
-
-                        <div class="col-lg-4 col-sm-6">
-                            <div class="th-product product-grid">
-                                <div class="product-img">
-                                    <img src="assets/img/product/product_1_3.jpg" alt="Product Image">
-                                    <div class="actions">
-                                        <a href="#QuickView" class="icon-btn popup-content"><i class="far fa-eye"></i></a>
-                                        <a href="cart.html" class="icon-btn"><i class="far fa-cart-plus"></i></a>
-                                        <a href="wishlist.html" class="icon-btn"><i class="far fa-heart"></i></a>
-                                    </div>
-                                </div>
-                                <div class="product-content">
-                                    <a href="shop-details.html" class="product-category">Equipment</a>
-                                    <h3 class="product-title"><a href="shop-details.html">CAD Dentistry Prosthesis</a></h3>
-                                    <span class="price">$96.85</span>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
     <!--==============================
 Testimonial Area  
 ==============================-->
     <section class="" id="testi-sec" data-bg-src="http://127.0.0.1:8000/static/img/bg/team_bg_1.jpg">
-
+    
 
         <div class="container space">
             <h2 class="sec-title text-center">What Our Client Says?</h2>
@@ -852,6 +494,9 @@ Testimonial Area
                                 {% for _ in testimonial.star_range %}
                                     <i class="fa-sharp fa-solid fa-star"></i>
                                 {% endfor %}
+                            </div>
+                            <div class="box-quote">
+                                <img src="{% static 'img/icon/quote_1.svg' %}" alt="Icon">
                             </div>
                             <p class="box-text">{{ testimonial.quote_text }}</p>
                             <div class="box-profile">
@@ -976,12 +621,12 @@ Blog Area
                         <h3 class="widget_title">Quick Links</h3>
                         <div class="menu-all-pages-container">
                             <ul class="menu">
-                                <li><a href="about.html">About Us</a></li>
-                                <li><a href="about.html">Terms of Use</a></li>
+                                <li><a href="/about">About Us</a></li>
+                                <li><a href="/about">Terms of Use</a></li>
                                 <li><a href="service.html">Our Services</a></li>
                                 <li><a href="faq.html">Help & FAQs</a></li>
                                 <li><a href="blog.html">Blog</a></li>
-                                <li><a href="about.html">Privacy policy</a></li>
+                                <li><a href="/about">Privacy policy</a></li>
                                 <li><a href="contact.html">Contact Us</a></li>
                             </ul>
                         </div>
@@ -1042,6 +687,12 @@ Blog Area
     </div>
 </footer>
 
+      <!-- Scroll To Top -->
+      <div class="scroll-top">
+        <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+            <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" style="transition: stroke-dashoffset 10ms linear 0s; stroke-dasharray: 307.919, 307.919; stroke-dashoffset: 307.919;"></path>
+        </svg>
+    </div>
     
     <!--********************************
         Code End  Here 
