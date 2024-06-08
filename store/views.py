@@ -19,7 +19,15 @@ def contact(request):
     return render(request, 'contact.html')
 
 def shop(request):
-    products = Product.objects.all()
+    category_id = request.GET.get('category')
+    if category_id:
+        # Filter products by category
+        category = get_object_or_404(Category, id=category_id)
+        products = Product.objects.filter(category=category)
+    else:
+        # If no category is specified, show all products
+        products = Product.objects.all()
+    
     return render(request, 'shop.html', {'products': products})
 
 def about(request):
@@ -30,8 +38,11 @@ def about(request):
 
 
 from django.shortcuts import render, get_object_or_404
-from .models import Product
+from .models import Product, Review
 
 def product_detail(request, product_id):
     product = get_object_or_404(Product, pk=product_id)
-    return render(request, 'product_detail.html', {'product': product})
+    reviews = Review.objects.filter(product=product)
+    related_products = Product.objects.filter(category=product.category).exclude(id=product.id)[:8]
+
+    return render(request, 'product_detail.html', {'product': product, 'related_products': related_products, 'reviews': reviews})

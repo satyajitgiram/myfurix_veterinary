@@ -1,2 +1,4 @@
 django
 pillow
+django-ckeditor==6.7.1
+whitenoise

@@ -9,10 +9,9 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>Furix - Veterinary Equipments</title>
     <meta name="author" content="Furix">
-    <meta name="description" content="Furix - Veterinary Equipments">
-    <meta name="keywords" content="Furix - Veterinary Equipments">
+    <meta name="description" content="Discover Furix, a leader in veterinary medical equipment, dedicated to innovation and the welfare of homeless pets. Explore our advanced products designed for precision and reliability in veterinary care.">
+    <meta name="keywords" content="Furix, veterinary equipment, veterinary medical equipment, animal care, veterinary ventilator systems, veterinary X-ray machines, homeless pets welfare, veterinary innovation">
     <meta name="robots" content="INDEX,FOLLOW">
-
     <!-- Mobile Specific Metas -->
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -215,14 +214,24 @@ Mobile Menu
             <ul>
                 <li><a href="/about">About Us</a></li>
                 <li >
-                    <a href="/products">Our Products</a>
+                    <a href="/products">Furix Vet Equipments</a>
                 </li>
+                <li >
+                    <a href="/products">Furix Wellness</a>
+                </li>
+                <li >
+                    <a href="/products">Furix Grooming</a>
+                </li>
+                <li >
+                    <a href="/products">Furix Healthcare</a>
+                </li>
+                
                 <li >
                     <a href="#">Blogs</a>
                     </ul>
                 </li>
                 <li>
-                    <a href="contact.html">Contact</a>
+                    <a href="/contact">Contact Us</a>
                 </li>
             </ul>
         </div>
@@ -289,23 +298,30 @@ Header Area
                 <div class="col-auto d-none d-lg-inline-block">
                     <nav class="main-menu d-none d-lg-inline-block">
                         <ul>
-                            <li><a href="/about">About Us</a></li>
                             <li >
-                                <a href="/products">Our Products</a>
+                                <a href="/products">Furix Vet Equipments</a>
+                            </li>
+                            <li >
+                                <a href="/products">Furix Wellness</a>
+                            </li>
+                            <li >
+                                <a href="/products">Furix Grooming</a>
+                            </li>
+                            <li >
+                                <a href="/products">Furix Healthcare</a>
                             </li>
                             <li>
                                 <a href="#">Blog</a>
                             </li>
+                            <li><a href="/about">About Us</a></li>
                             <li>
-                                <a href="contact">Contact</a>
+                                <a href="contact">Contact Us</a>
                             </li>
                         </ul>
                     </nav>
                 </div>
                 <div class="col-auto">
                     <div class="header-button">
-                        <button type="button" class="icon-btn searchBoxToggler d-none d-xl-inline-block"><i class="far fa-search"></i></button>
-                        <a href="/contact" class="th-btn">Enquire Now</a>
                         <button type="button" class="icon-btn sideMenuInfo d-none d-xl-inline-block"><i class="far fa-bars"></i></button>
                         <button type="button" class="th-menu-toggle d-block d-lg-none"><i class="far fa-bars"></i></button>
                     </div>
@@ -340,7 +356,7 @@ About Area
             <div class="row justify-content-center">
                 <div class="col-lg-7 col-md-8">
                     <div class="title-area text-center">
-                        <span class="sub-title"><img src="assets/img/theme-img/title_icon.svg" alt="shape">About Our Company</span>
+                        <span class="sub-title"><img src="{% static 'img/theme-img/title_icon.svg' %}" alt="shape">About Our Company</span>
                         <h2 class="sec-title">Elevating Veterinary Care with Compassion</h2>
                     </div>
                 </div>
@@ -349,7 +365,7 @@ About Area
                 <div class="col-xl-6 mb-30 mb-xl-0">
                     <div class="img-box1">
                         <div class="img1">
-                            <img src="assets/img/normal/about_1_3.png" alt="About">
+                            <img src="{% static 'img/normal/about_1_3.png' %}" alt="About">
                         </div>
                         <div class="about-info style2">
                         </div>
@@ -374,13 +390,13 @@ About Area
                         <div>
                             <a href="about.html" class="th-btn">More About Us</a>
                         </div>
-                        <div class="about-video-wrap">
+                        {% comment %} <div class="about-video-wrap">
                             <div class="th-video about-video">
-                                <img src="assets/img/normal/about_1_4.jpg" alt="video">
+                                <img src="{% static 'img/normal/about_1_4.jpg' %}" alt="video">
                                 <a href="https://www.youtube.com/watch?v=_sI_Ps7JSEk" class="play-btn popup-video"><i class="fas fa-play"></i></a>
                             </div>
 
-                        </div>
+                        </div> {% endcomment %}
                     </div>
                 </div>
             </div>
