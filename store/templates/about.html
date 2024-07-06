@@ -291,14 +291,14 @@ Header Area
             <div class="row align-items-center justify-content-between">
                 <div class="col-auto">
                     <div class="header-logo">
-                        <div class="logo-bg" data-bg-src="assets/img/bg/logo_bg_1.png"></div>
+                        <div class="logo-bg" data-bg-src="{% static 'img/bg/logo_bg_1.png' %}"></div>
                         <a href="/"><img  style="height:61px;"  src="{% static 'img/furixlogo.png' %}" alt="Furix"></a>
                     </div>
                 </div>
                 <div class="col-auto d-none d-lg-inline-block">
                     <nav class="main-menu d-none d-lg-inline-block">
                         <ul>
-                            <li >
+                            {% comment %} <li >
                                 <a href="/products">Furix Vet Equipments</a>
                             </li>
                             <li >
@@ -306,17 +306,11 @@ Header Area
                             </li>
                             <li >
                                 <a href="/products">Furix Grooming</a>
-                            </li>
-                            <li >
-                                <a href="/products">Furix Healthcare</a>
-                            </li>
-                            <li>
-                                <a href="#">Blog</a>
-                            </li>
+                            </li> {% endcomment %}
                             <li><a href="/about">About Us</a></li>
-                            <li>
-                                <a href="contact">Contact Us</a>
-                            </li>
+                            <li ><a href="/products">Furix Vet Equipments</a></li>
+                            <li><a href="#">Blog</a></li>
+                            <li><a href="contact">Contact Us</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -351,7 +345,7 @@ About Area
 ==============================-->
     <div class="overflow-hidden space" id="about-sec">
         <div class="shape-mockup" data-top="0" data-right="0"><img src="{% static 'img/shape/pattern_shape_1.png' %}" alt="shape"></div>
-        <div class="shape-mockup jump d-none d-xl-none" data-bottom="10%" data-left="2%"><img src="assets/img/shape/medicine_1.png" alt="shape"></div>
+        <div class="shape-mockup jump d-none d-xl-none" data-bottom="10%" data-left="2%"><img src="{% static 'img/shape/medicine_1.png' %}" alt="shape"></div>
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-lg-7 col-md-8">
@@ -365,7 +359,7 @@ About Area
                 <div class="col-xl-6 mb-30 mb-xl-0">
                     <div class="img-box1">
                         <div class="img1">
-                            <img src="{% static 'img/normal/about_1_3.png' %}" alt="About">
+                            <img src="{% static 'img/normal/about_1.jpg' %}" alt="About">
                         </div>
                         <div class="about-info style2">
                         </div>
@@ -388,7 +382,7 @@ About Area
                             </div>
 
                         <div>
-                            <a href="about.html" class="th-btn">More About Us</a>
+                            {% comment %} <a href="/about" class="th-btn">More About Us</a> {% endcomment %}
                         </div>
                         {% comment %} <div class="about-video-wrap">
                             <div class="th-video about-video">
@@ -435,7 +429,7 @@ Counter Area
     <!--==============================
 Feature Area  
 ==============================-->
-    <section class="why-sec3 space-top" id="why-sec" data-bg-src="assets/img/bg/why_bg_3.jpg">
+    <section class="why-sec3 space-top" id="why-sec" data-bg-src="{% static 'img/bg/why_bg_3.jpg' %}">
         <div class="container pb-5 mb-2">
 
             
@@ -470,7 +464,7 @@ Cta Area
     <!--==============================
 Testimonial Area  
 ==============================-->
-    <section class="space" id="testi-sec" data-bg-src="assets/img/bg/testi_bg_3.jpg">
+    <section class="space" id="testi-sec" data-bg-src="{% static 'img/bg/testi_bg_3.jpg' %}">
         <div class="container">
             <h2 class="sec-title text-center">What Our Customers Says?</h2>
             <div class="swiper th-slider has-shadow" id="testiSlide1" data-slider-options='{"breakpoints":{"0":{"slidesPerView":1},"576":{"slidesPerView":"1"},"768":{"slidesPerView":"1"},"992":{"slidesPerView":"2"},"1200":{"slidesPerView":"2"}}}'>
@@ -508,106 +502,7 @@ Testimonial Area
     <!--==============================
 	Footer Area
 ==============================-->
-<footer class="footer-wrapper footer-layout2" data-bg-src="assets/img/bg/footer_bg_2.jpg">
-    <div class="widget-area">
-        <div class="container">
-            <div class="row justify-content-between">
-                <div class="col-md-6 col-xl-auto">
-                    <div class="widget footer-widget">
-                        <h3 class="widget_title">Contact Us</h3>
-                        <div class="th-widget-contact">
-                            <p class="footer-text">Keep up to date with our latest news & special offer.</p>
-                            <p class="footer-info">
-                                <i class="fal fa-location-dot"></i>
-                                6/F Mega Cube, Wang Kwong Road, Owloonk, Hong Kong
-                            </p>
-                            <p class="footer-info">
-                                <i class="fal fa-envelope"></i>
-                                <a href="mailto:sales@myfurix.com" class="info-box_link">sales@myfurix.com</a>
-                            </p>
-                            <p class="footer-info">
-                                <i class="fal fa-phone"></i>
-                                <a href="tel:+85295790472" class="info-box_link">+852 95790472</a>
-                            </p>
-                            <div class="th-social">
-                                <a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a>
-                                <a href="https://www.twitter.com/"><i class="fab fa-twitter"></i></a>
-                                <a href="https://www.linkedin.com/"><i class="fab fa-linkedin-in"></i></a>
-                                <a href="https://www.whatsapp.com/"><i class="fab fa-whatsapp"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-xl-auto">
-                    <div class="widget widget_nav_menu footer-widget">
-                        <h3 class="widget_title">Quick Links</h3>
-                        <div class="menu-all-pages-container">
-                            <ul class="menu">
-                                <li><a href="/about">About Us</a></li>
-                                <li><a href="/about">Terms of Use</a></li>
-                                <li><a href="service.html">Our Services</a></li>
-                                <li><a href="faq.html">Help & FAQs</a></li>
-                                <li><a href="blog.html">Blog</a></li>
-                                <li><a href="/about">Privacy policy</a></li>
-                                <li><a href="contact.html">Contact Us</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                {% comment %} <div class="col-md-6 col-xl-auto">
-                    <div class="widget widget_nav_menu footer-widget">
-                        <h3 class="widget_title">Popular service</h3>
-                        <div class="menu-all-pages-container">
-                            <ul class="menu">
-                                <li><a href="service-details.html">Cardiology Care</a></li>
-                                <li><a href="service-details.html">Urgent Care</a></li>
-                                <li><a href="service-details.html">Orthopedic Care</a></li>
-                                <li><a href="service-details.html">Diagnosis department</a></li>
-                                <li><a href="service-details.html">Gastroenterology</a></li>
-                                <li><a href="service-details.html">Therapy department</a></li>
-                                <li><a href="service-details.html">Dental service</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div> {% endcomment %}
-                <div class="col-md-6 col-xl-auto">
-                    <div class="widget footer-widget">
-                        <h3 class="widget_title">Let’s Stay In Touch</h3>
-                        <div class="newsletter-widget">
-                            <p class="footer-text">Subscribe for newsletter</p>
-                            <form action="#" class="newsletter-form">
-                                <div class="form-group">
-                                    <input class="form-control" type="email" placeholder="Enter Email" required="">
-                                </div>
-                                <button type="submit" class="simple-icon"><i class="fa-solid fa-paper-plane"></i></button>
-                            </form>
-                            <div class="form-group">
-                                <input type="checkbox" id="checkbox" name="checkbox">
-                                <label for="checkbox">I agree with the terms & conditions</label>
-                            </div>
-                            <div class="btn-group">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="copyright-wrap">
-        <div class="container">
-            <div class="row gy-2 align-items-center">
-                <div class="col-md-7">
-                    <p class="copyright-text">Copyright <i class="fal fa-copyright"></i> 2024 <a href="www.myfurix.com">Furix</a>. All Rights Reserved.</p>
-                </div>
-                <div class="col-md-5 text-center text-md-end">
-                    <div class="payment-img">
-                        <img src="assets/img/normal/payment_methods.png" alt="Image">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</footer>
+{% include "footer.html" %}
 
     <!--********************************
 			Code End  Here 

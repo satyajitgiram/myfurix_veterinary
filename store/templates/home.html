@@ -1,6 +1,6 @@
 {% load static %}
 <!doctype html>
-<html class="no-js" lang="zxx">
+<html class="no-js" lang="en">
 
 
 
@@ -58,7 +58,72 @@
     <!-- Theme Custom CSS -->
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
 
-
+    <style>
+        .product-img-wrapper {
+            position: relative;
+            overflow: hidden;
+            width: 100%;
+            padding-top: 100%; /* 1:1 Aspect Ratio */
+        }
+        
+        .product-img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Ensures the image covers the container */
+        }
+        
+        .th-product {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 100%;
+        }
+        
+        .product-content {
+            padding: 15px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            flex-grow: 1;
+        }
+        
+        .actions {
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            display: flex;
+            gap: 5px;
+        }
+        
+        .product-category,
+        .product-title {
+            margin: 5px 0;
+        }
+        
+        .product-title {
+            font-size: 1.1em;
+        }
+        
+        .price {
+            font-size: 1.2em;
+            font-weight: bold;
+        }
+        
+        .product-tag {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background-color: #ff0000;
+            color: #fff;
+            padding: 5px;
+            font-size: 0.8em;
+            text-transform: uppercase;
+        }
+        
+    </style>
 </head>
 
 <body>
@@ -172,7 +237,7 @@ Product Area
                     <div class="product-img">
                         <img src="{{ product.image.url }}" alt="Product Image">
                         {% if product.discount_price %}
-                        {% comment %} <span class="product-tag">Sale!</span> {% endcomment %}
+                        <!-- <span class="product-tag">Sale!</span> -->
                         {% endif %}
                         <div class="actions">
                             <a href="#QuickView" class="icon-btn popup-content"><i class="far fa-eye"></i></a>
@@ -183,16 +248,17 @@ Product Area
                     <div class="product-content">
                         <a href="{% url 'product_detail' product.id %}" class="product-category">{{ product.category.name }}</a>
                         <h3 class="product-title"><a href="{% url 'product_detail' product.id %}">{{ product.title }}</a></h3>
-                        {% comment %} {% if product.discount_price %}
+                        <!-- {% if product.discount_price %}
                         <span class="price">${{ product.discount_price }} - <del>${{ product.price }}</del></span>
                         {% else %}
                         <span class="price">${{ product.price }}</span>
-                        {% endif %} {% endcomment %}
+                        {% endif %} -->
                     </div>
                 </div>
             </div>
             {% endfor %}
         </div>
+        
     </div>
 </section>
 
@@ -202,7 +268,7 @@ Product Area
     <!--==============================
 Testimonial Area  
 ==============================-->
-    <section class="" id="testi-sec" data-bg-src="http://127.0.0.1:8000/static/img/bg/team_bg_1.jpg">
+    <section class="" id="testi-sec" data-bg-src="{% static 'img/bg/team_bg_1.jpg' %}">
     
 
         <div class="container space">
@@ -277,106 +343,7 @@ Blog Area
     <!--==============================
 	Footer Area
 ==============================-->
-<footer class="footer-wrapper footer-layout2" data-bg-src="assets/img/bg/footer_bg_2.jpg">
-    <div class="widget-area">
-        <div class="container">
-            <div class="row justify-content-between">
-                <div class="col-md-6 col-xl-auto">
-                    <div class="widget footer-widget">
-                        <h3 class="widget_title">Contact Us</h3>
-                        <div class="th-widget-contact">
-                            <p class="footer-text">Keep up to date with our latest news & special offer.</p>
-                            <p class="footer-info">
-                                <i class="fal fa-location-dot"></i>
-                                6/F Mega Cube, Wang Kwong Road, Owloonk, Hong Kong
-                            </p>
-                            <p class="footer-info">
-                                <i class="fal fa-envelope"></i>
-                                <a href="mailto:sales@myfurix.com" class="info-box_link">sales@myfurix.com</a>
-                            </p>
-                            <p class="footer-info">
-                                <i class="fal fa-phone"></i>
-                                <a href="tel:+85295790472" class="info-box_link">+852 95790472</a>
-                            </p>
-                            <div class="th-social">
-                                <a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a>
-                                <a href="https://www.twitter.com/"><i class="fab fa-twitter"></i></a>
-                                <a href="https://www.linkedin.com/"><i class="fab fa-linkedin-in"></i></a>
-                                <a href="https://www.whatsapp.com/"><i class="fab fa-whatsapp"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-xl-auto">
-                    <div class="widget widget_nav_menu footer-widget">
-                        <h3 class="widget_title">Quick Links</h3>
-                        <div class="menu-all-pages-container">
-                            <ul class="menu">
-                                <li><a href="/about">About Us</a></li>
-                                <li><a href="/about">Terms of Use</a></li>
-                                <li><a href="service.html">Our Services</a></li>
-                                <li><a href="faq.html">Help & FAQs</a></li>
-                                <li><a href="blog.html">Blog</a></li>
-                                <li><a href="/about">Privacy policy</a></li>
-                                <li><a href="contact.html">Contact Us</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                {% comment %} <div class="col-md-6 col-xl-auto">
-                    <div class="widget widget_nav_menu footer-widget">
-                        <h3 class="widget_title">Popular service</h3>
-                        <div class="menu-all-pages-container">
-                            <ul class="menu">
-                                <li><a href="service-details.html">Cardiology Care</a></li>
-                                <li><a href="service-details.html">Urgent Care</a></li>
-                                <li><a href="service-details.html">Orthopedic Care</a></li>
-                                <li><a href="service-details.html">Diagnosis department</a></li>
-                                <li><a href="service-details.html">Gastroenterology</a></li>
-                                <li><a href="service-details.html">Therapy department</a></li>
-                                <li><a href="service-details.html">Dental service</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div> {% endcomment %}
-                <div class="col-md-6 col-xl-auto">
-                    <div class="widget footer-widget">
-                        <h3 class="widget_title">Let’s Stay In Touch</h3>
-                        <div class="newsletter-widget">
-                            <p class="footer-text">Subscribe for newsletter</p>
-                            <form action="#" class="newsletter-form">
-                                <div class="form-group">
-                                    <input class="form-control" type="email" placeholder="Enter Email" required="">
-                                </div>
-                                <button type="submit" class="simple-icon"><i class="fa-solid fa-paper-plane"></i></button>
-                            </form>
-                            <div class="form-group">
-                                <input type="checkbox" id="checkbox" name="checkbox">
-                                <label for="checkbox">I agree with the terms & conditions</label>
-                            </div>
-                            <div class="btn-group">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="copyright-wrap">
-        <div class="container">
-            <div class="row gy-2 align-items-center">
-                <div class="col-md-7">
-                    <p class="copyright-text">Copyright <i class="fal fa-copyright"></i> 2024 <a href="www.myfurix.com">Furix</a>. All Rights Reserved.</p>
-                </div>
-                <div class="col-md-5 text-center text-md-end">
-                    <div class="payment-img">
-                        <img src="assets/img/normal/payment_methods.png" alt="Image">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</footer>
+    {% include "footer.html" %}
 
       <!-- Scroll To Top -->
       <div class="scroll-top">

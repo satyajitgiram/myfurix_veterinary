@@ -1,7 +1,8 @@
-    <!--==============================
+{% load static %}
+<!--==============================
 	Footer Area
 ==============================-->
-<footer class="footer-wrapper footer-layout2" data-bg-src="assets/img/bg/footer_bg_2.jpg">
+<footer class="footer-wrapper footer-layout2" data-bg-src="{% static 'img/bg/footer_bg_2.jpg' %}">
     <div class="widget-area">
         <div class="container">
             <div class="row justify-content-between">
@@ -12,7 +13,7 @@
                             <p class="footer-text">Keep up to date with our latest news & special offer.</p>
                             <p class="footer-info">
                                 <i class="fal fa-location-dot"></i>
-                                6/F Mega Cube, Wang Kwong Road, Owloonk, Hong Kong
+                                6/F Mega Cube, Wang Kwong Road, Kowloon, Hong Kong
                             </p>
                             <p class="footer-info">
                                 <i class="fal fa-envelope"></i>
@@ -38,11 +39,11 @@
                             <ul class="menu">
                                 <li><a href="/about">About Us</a></li>
                                 <li><a href="/about">Terms of Use</a></li>
-                                <li><a href="service.html">Our Services</a></li>
-                                <li><a href="faq.html">Help & FAQs</a></li>
-                                <li><a href="blog.html">Blog</a></li>
-                                <li><a href="/about">Privacy policy</a></li>
-                                <li><a href="contact.html">Contact Us</a></li>
+                                <li><a href="#">Our Services</a></li>
+                                <li><a href="#">Help & FAQs</a></li>
+                                <li><a href="#">Blog</a></li>
+                                <li><a href="#">Privacy policy</a></li>
+                                <li><a href="{% url 'contact' %}">Contact Us</a></li>
                             </ul>
                         </div>
                     </div>
@@ -93,9 +94,9 @@
                     <p class="copyright-text">Copyright <i class="fal fa-copyright"></i> 2024 <a href="www.myfurix.com">Furix</a>. All Rights Reserved.</p>
                 </div>
                 <div class="col-md-5 text-center text-md-end">
-                    <div class="payment-img">
+                    {% comment %} <div class="payment-img">
                         <img src="assets/img/normal/payment_methods.png" alt="Image">
-                    </div>
+                    </div> {% endcomment %}
                 </div>
             </div>
         </div>
